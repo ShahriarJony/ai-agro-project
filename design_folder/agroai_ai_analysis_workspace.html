@@ -1,0 +1,557 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline":"#727974","surface-container-lowest":"#ffffff","on-tertiary-fixed":"#0b2006","on-primary-fixed":"#012114","on-primary-fixed-variant":"#2e4d3e","primary-fixed":"#c7ebd6","secondary-fixed":"#adf3b8","outline-variant":"#c1c8c2","secondary-fixed-dim":"#92d69d","on-secondary":"#ffffff","surface-dim":"#d0dbed","on-secondary-container":"#307142","on-secondary-fixed":"#00210b","background":"#f8f9ff","tertiary-fixed-dim":"#b3cea6","primary-container":"#1e3d2f","error-container":"#ffdad6","secondary-container":"#adf3b8","surface-bright":"#f8f9ff","surface":"#f8f9ff","error":"#ba1a1a","secondary":"#296b3c","on-primary":"#ffffff","on-surface":"#121c2a","tertiary-container":"#273d20","on-error":"#ffffff","surface-container-high":"#dee9fc","on-surface-variant":"#424844","surface-container-highest":"#d9e3f6","primary":"#06271a","surface-container-low":"#eff4ff","inverse-surface":"#27313f","inverse-primary":"#accebb","on-error-container":"#93000a","primary-fixed-dim":"#accebb","on-primary-container":"#86a895","on-secondary-fixed-variant":"#0a5226","tertiary-fixed":"#cfebc1","surface-variant":"#d9e3f6","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#364d2e","surface-tint":"#456555","on-background":"#121c2a","surface-container":"#e6eeff","tertiary":"#11270c","inverse-on-surface":"#eaf1ff","on-tertiary-container":"#8ea882"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-sm":"1rem","gutter":"1.25rem","space-lg":"1.25rem","gutter-lg":"1.5rem","space-xl":"1.75rem","space-2xl":"2.5rem","space-sm":"0.5rem","space-md":"0.75rem","gutter-sm":"0.75rem","space-xs":"0.25rem","margin-lg":"2rem","margin":"1.5rem"},fontFamily:{"headline-md":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"],"display-lg-mobile":["Inter"],"body-md":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"data-mono":["Inter"],"headline-lg":["Inter"],"display-lg":["Inter"],"body-sm":["Inter"]},fontSize:{"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"24px",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"display-lg-mobile":["26px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"500"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}],"data-mono":["13px",{lineHeight:"18px",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-screen w-60 bg-surface border-r border-outline-variant/40 z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline-variant/30"><img alt="AgroAI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WS9o9_h4OGsmHnX6NBzt9g6Z8N839pzzySGkYOcINXvi7ndiUQ7BiyelWkujiGyAXCAUtgTQpVuZdcbuX5L4vHJiSqI-XrO2Wl0j8dt8N13t9ztqOtbF55OPuG8Bd7NjXmQU6bOoWAnRpV-j8-g_xH6U72RHibMHPRcN8SXH2l3DZ_kMVVpAg3OWazB6fL9zqA0s5aqw1L2czQd18IK5VXJNV7bQ1bjpWP26-fBkx_pgAlH_iVtmfVF_0"><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary leading-tight truncate">AgroAI</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Decision Support</span></div></div><div class="p-space-sm space-y-space-md"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Main</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">home</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-farm" href="#"><span class="material-symbols-outlined text-[18px]">location_on</span><span>My Farm</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="fields" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span>Fields</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="weather" href="#"><span class="material-symbols-outlined text-[18px]">wb_sunny</span><span>Weather</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">AI &amp; Analysis</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-semibold rounded-lg" data-path="ai-analysis" href="#"><span class="material-symbols-outlined text-[18px]">memory</span><span>AI Analysis</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="disease-detection" href="#"><span class="material-symbols-outlined text-[18px]">filter_center_focus</span><span>Disease Detection</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="irrigation-planner" href="#"><span class="material-symbols-outlined text-[18px]">water_drop</span><span>Irrigation Planner</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="algorithms-and-theory" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span>Algorithms &amp; Theory</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Management</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="resources-and-sensors" href="#"><span class="material-symbols-outlined text-[18px]">dns</span><span>Resources &amp; Sensors</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="history-and-logs" href="#"><span class="material-symbols-outlined text-[18px]">schedule</span><span>History &amp; Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>Settings</span></a></nav></div></div></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface"><div class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg bg-surface-container-lowest border border-outline-variant/40"><span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">FastAPI + Firebase (Healthy)</span></div></div></aside><div class="pl-60 flex flex-col min-h-screen"><header class="fixed top-0 left-60 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 z-40 px-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm min-w-0"><span class="material-symbols-outlined text-secondary text-[20px] shrink-0">eco</span><div class="flex items-center gap-space-xs truncate"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Green Valley Farm</span><span class="text-outline font-label-md text-label-md">•</span><span class="font-body-md text-body-md text-on-surface-variant truncate">Sector 4 — Salinas Valley, CA</span></div></div><div class="flex items-center gap-gutter-lg shrink-0"><div class="hidden xl:flex items-center gap-space-xs bg-surface px-space-md py-space-xs rounded-lg border border-outline-variant/30 text-on-surface-variant font-data-mono text-data-mono"><span class="material-symbols-outlined text-[18px] text-secondary">partly_cloudy_day</span><span>22°C Clear</span><span class="text-outline-variant">|</span><span>Humidity 58%</span><span class="text-outline-variant">|</span><span>Wind 9 km/h NW</span></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-error text-on-error rounded-full flex items-center justify-center font-label-sm text-label-sm font-semibold">2</span></button><div class="h-6 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtfGUWf3TBenBcYhZR2uRKuz84PeAkSSbZSIDAtsU9X-CDXdkPpfQN-udNW7R8tRXtnbmjcAKD0XtbSS1C-oqAy-O66WIILaCzECUYoU8TK9EEcTWO7pa7Gt7dua4k6Z2E9Ew5kum2E5jxuIYdrupJhI6lU647zszH5VDn4T36L58MEqXqtN9ROwgKRZuEvIFVlmq9t5SdNc_h7Kqs2UR7uwgY4_1-h7ikIz4jyAVY2erQH8wA-uqo"><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Farm Operations Lead</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin-lg py-margin flex flex-col gap-space-xl max-w-[1600px] mx-auto w-full">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+<span class="material-symbols-outlined text-[15px] text-secondary">model_training</span>
+<span>Inference Engine v2.4</span>
+<span>•</span>
+<span>Salinas Valley Operational Grid</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight font-semibold">AI Decision Support &amp; Model Insights</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Integrated machine learning and classical AI algorithms applied to multi-spectral farm telemetry</p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-auto shrink-0 bg-surface-container-low px-space-md py-space-sm rounded-xl shadow-sm">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">FastAPI Engine: Active • Inference Latency: 42ms</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">PyTorch 2.2.1 • Scikit-learn 1.4 • Deterministic Seed 42</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-xs scrollbar-none">
+<button class="tab-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary shadow-sm" id="tab-all" onclick="filterModules('all')" type="button">
+        All Active Pipelines (4)
+      </button>
+<button class="tab-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm" id="tab-clustering" onclick="filterModules('clustering')" type="button">
+        Field Clustering (K-Means)
+      </button>
+<button class="tab-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm" id="tab-rules" onclick="filterModules('rules')" type="button">
+        Agronomic Recommendations (Decision Tree)
+      </button>
+<button class="tab-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm" id="tab-csp" onclick="filterModules('csp')" type="button">
+        Irrigation Optimization (CSP &amp; AC-3)
+      </button>
+<button class="tab-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm" id="tab-astar" onclick="filterModules('astar')" type="button">
+        Tractor Pathfinding (A*)
+      </button>
+</div>
+<div class="grid grid-cols-12 gap-gutter-lg">
+<section class="col-span-12 xl:col-span-7 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" id="module-clustering">
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm bg-surface-container-low/40">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">bubble_chart</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Field Environmental Clustering</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-semibold">k=4</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant">Unsupervised topology grouping (Soil Moisture % vs Ambient Temp °C)</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md text-right">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">Silhouette Coeff</span>
+<span class="font-data-mono text-headline-sm text-secondary font-semibold">0.74</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">Inertia</span>
+<span class="font-data-mono text-headline-sm text-on-surface font-semibold">184.2</span>
+</div>
+</div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-lg">
+<div class="relative w-full h-80 bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between overflow-hidden">
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 font-semibold text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">thermostat</span>
+                Ambient Temperature (°C) [Y-axis: 18°C – 36°C]
+              </span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">Convergence: 8 Iterations</span>
+</div>
+<svg class="absolute inset-0 w-full h-full p-space-lg pointer-events-none" fill="none" preserveAspectRatio="none" viewBox="0 0 540 240">
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="3 3" x1="40" x2="520" y1="40" y2="40"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="3 3" x1="40" x2="520" y1="100" y2="100"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="3 3" x1="40" x2="520" y1="160" y2="160"></line>
+<line class="text-outline-variant/60" stroke="currentColor" x1="40" x2="520" y1="210" y2="210"></line>
+<line class="text-outline-variant/60" stroke="currentColor" x1="40" x2="40" y1="20" y2="210"></line>
+<ellipse class="fill-primary-fixed/20 stroke-primary" cx="140" cy="85" rx="75" ry="45" stroke-dasharray="2 2" stroke-width="1"></ellipse>
+<ellipse class="fill-surface-dim/40 stroke-surface-tint" cx="410" cy="70" rx="60" ry="38" stroke-dasharray="2 2" stroke-width="1"></ellipse>
+<ellipse class="fill-secondary-container/30 stroke-secondary" cx="370" cy="165" rx="75" ry="35" stroke-dasharray="2 2" stroke-width="1"></ellipse>
+<ellipse class="fill-error-container/30 stroke-error" cx="110" cy="180" rx="45" ry="25" stroke-dasharray="2 2" stroke-width="1"></ellipse>
+</svg>
+<div class="relative w-full h-full grid grid-cols-12 grid-rows-6 pointer-events-auto">
+<div class="col-start-3 row-start-2 flex items-center gap-1.5 cursor-pointer group">
+<span class="w-3 h-3 rounded-full bg-secondary shadow-sm ring-2 ring-surface-container-lowest"></span>
+<span class="font-data-mono text-label-sm bg-surface-container-lowest/90 px-1 rounded text-on-surface font-semibold shadow-xs">A-1 (56%, 22°)</span>
+</div>
+<div class="col-start-4 row-start-3 flex items-center gap-1.5 cursor-pointer group">
+<span class="w-3 h-3 rounded-full bg-secondary shadow-sm ring-2 ring-surface-container-lowest"></span>
+<span class="font-data-mono text-label-sm bg-surface-container-lowest/90 px-1 rounded text-on-surface font-semibold shadow-xs">A-2 (54%, 23°)</span>
+</div>
+<div class="col-start-3 row-start-3 flex items-center gap-1.5 cursor-pointer group">
+<span class="w-3.5 h-3.5 rounded-full bg-primary-container text-on-primary text-[8px] flex items-center justify-center font-bold">★</span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">Centroid 0</span>
+</div>
+<div class="col-start-9 row-start-2 flex items-center gap-1.5 cursor-pointer group">
+<span class="w-3 h-3 rounded-full bg-surface-tint shadow-sm ring-2 ring-surface-container-lowest"></span>
+<span class="font-data-mono text-label-sm bg-surface-container-lowest/90 px-1 rounded text-on-surface font-semibold shadow-xs">D-1 (78%, 21°)</span>
+</div>
+<div class="col-start-10 row-start-3 flex items-center gap-1.5 cursor-pointer group">
+<span class="w-3 h-3 rounded-full bg-surface-tint shadow-sm ring-2 ring-surface-container-lowest"></span>
+<span class="font-data-mono text-label-sm bg-surface-container-lowest/90 px-1 rounded text-on-surface font-semibold shadow-xs">D-3 (82%, 20°)</span>
+</div>
+<div class="col-start-8 row-start-5 flex items-center gap-1.5 cursor-pointer group animate-pulse">
+<span class="w-3.5 h-3.5 rounded-full bg-tertiary-container shadow-sm ring-2 ring-surface-container-lowest"></span>
+<span class="font-data-mono text-label-sm bg-surface-container-lowest/90 px-1 rounded text-on-surface font-bold text-tertiary shadow-xs">C-4 (28%, 32°)</span>
+</div>
+<div class="col-start-9 row-start-5 flex items-center gap-1.5 cursor-pointer group">
+<span class="w-3 h-3 rounded-full bg-tertiary-container shadow-sm ring-2 ring-surface-container-lowest"></span>
+<span class="font-data-mono text-label-sm bg-surface-container-lowest/90 px-1 rounded text-on-surface font-semibold shadow-xs">B-2 (31%, 33°)</span>
+</div>
+<div class="col-start-9 row-start-4 flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-primary-container text-on-primary text-[8px] flex items-center justify-center font-bold">★</span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">Centroid 2</span>
+</div>
+<div class="col-start-2 row-start-5 flex items-center gap-1.5 cursor-pointer group">
+<span class="w-3.5 h-3.5 rounded-full bg-error shadow-sm ring-2 ring-surface-container-lowest"></span>
+<span class="font-data-mono text-label-sm bg-surface-container-lowest/90 px-1 rounded text-error font-bold shadow-xs">S-9 Outlier (12%, 34°)</span>
+</div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="flex items-center gap-1 font-semibold text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">water_drop</span>
+                Soil Moisture Volume % [X-axis: 0% – 100%]
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Normalized scale • Euclidean distance metric</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Cluster 0: Optimal</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 Fields (A-1, A-2, A-3, B-1, E-2)</span>
+<span class="font-data-mono text-label-sm text-secondary">Loss: 0.041</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-tint"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Cluster 1: Cool/High-H₂O</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Fields (D-1, D-2, D-3)</span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">Loss: 0.052</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Cluster 2: Thermal Stress</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Fields (C-4, B-2, F-1)</span>
+<span class="font-data-mono text-label-sm text-error">Stress Delta +18%</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="font-label-sm text-label-sm font-semibold text-error">Cluster 3: Sensor Fault</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 Node (S-9 Sector West)</span>
+<span class="font-data-mono text-label-sm text-error">Deviation 3.2σ</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">psychology</span>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Agronomic Insight</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-mono">CONF: 97.1%</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Fields in <strong class="text-on-surface font-semibold">Cluster 2 (C-4, B-2)</strong> exhibit localized moisture stress requiring prioritized scheduling. Cross-referencing vapor pressure deficit confirms transpiration exhaustion in romaine lettuce blocks.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<section class="col-span-12 xl:col-span-5 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" id="module-rules">
+<div class="p-space-lg flex items-center justify-between bg-surface-container-low/40">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Crop Action Recommendation</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Explainable Decision Tree • Rule ID: AGR-DT-402</span>
+</div>
+</div>
+<div class="px-space-xs py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+            94.6% Conf
+          </div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-lg flex-1 justify-between">
+<div class="flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Active Inference Evaluation Tree</span>
+<div class="flex flex-col gap-space-xs relative">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-label-sm px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-semibold">Node 0</span>
+<span class="font-body-md text-body-md text-on-surface">Soil Moisture &lt; 45%</span>
+</div>
+<span class="font-data-mono text-label-sm text-secondary font-semibold">Current: 38.4% (TRUE)</span>
+</div>
+<div class="ml-6 pl-4 flex flex-col gap-space-xs relative">
+<div class="absolute -left-2 top-3 w-4 h-4 text-outline-variant">
+<span class="material-symbols-outlined text-[16px]">subdirectory_arrow_right</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-label-sm px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-semibold">Node 1</span>
+<span class="font-body-md text-body-md text-on-surface">Rain forecast &lt; 5mm in 48h?</span>
+</div>
+<span class="font-data-mono text-label-sm text-secondary font-semibold">0.2mm (TRUE)</span>
+</div>
+<div class="ml-6 pl-4 flex flex-col gap-space-xs relative">
+<div class="absolute -left-2 top-3 w-4 h-4 text-outline-variant">
+<span class="material-symbols-outlined text-[16px]">subdirectory_arrow_right</span>
+</div>
+<div class="p-space-sm rounded-lg bg-secondary-container text-on-secondary-container flex flex-col gap-1 shadow-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Terminal Action Triggered</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-secondary-container font-semibold">Gini: 0.02</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-semibold">Initiate 1.5hr cycle on Pump 2</span>
+<span class="font-label-sm text-label-sm opacity-90">Target target parcel: Field C-4 • Flow: 420 L/min</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Gini Feature Importance (SHAP-aligned)</span>
+<div class="flex flex-col gap-space-xs">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface mb-1">
+<span>Soil Moisture (0-30cm)</span>
+<span class="font-data-mono">0.42</span>
+</div>
+<div class="h-2 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 42%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface mb-1">
+<span>Evapotranspiration Rate (ET₀)</span>
+<span class="font-data-mono">0.28</span>
+</div>
+<div class="h-2 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 28%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface mb-1">
+<span>Soil Temperature</span>
+<span class="font-data-mono">0.18</span>
+</div>
+<div class="h-2 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-surface-tint" style="width: 18%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface mb-1">
+<span>Normalized Canopy Index (NDVI)</span>
+<span class="font-data-mono">0.12</span>
+</div>
+<div class="h-2 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-outline-variant" style="width: 12%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Validated on 1,420 historical harvest cycles</span>
+<button class="px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center gap-1 shadow-sm" type="button">
+<span>Execute Rule</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<section class="col-span-12 lg:col-span-6 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" id="module-csp">
+<div class="p-space-lg flex items-center justify-between bg-surface-container-low/40">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Constraint Satisfaction &amp; Consistency</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">CSP Solver with AC-3 Arc Consistency Validation</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-1 rounded bg-surface-container text-on-surface font-semibold">Feasible Domain: 3/24</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md flex-1">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Active Operational Constraints (Hard &amp; Soft)</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Pump Concurrency</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Max 2 Units</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avoid hydraulic surge</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Tariff Exclusion</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]">bolt</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">12:00 – 16:00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Peak $0.34/kWh window</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Head Pressure</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">speed</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">&gt; 42 PSI</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Minimum nozzle atomization</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">24-Hour Domain Arc Pruning</span>
+<span class="font-data-mono text-label-sm text-secondary font-semibold">AC-3 Steps: 46 arc checks</span>
+</div>
+<div class="grid grid-cols-12 gap-1 p-space-sm bg-surface-container-low rounded-lg text-center font-data-mono text-label-sm">
+<div class="p-1 rounded bg-surface-container text-on-surface-variant line-through opacity-50">00h</div>
+<div class="p-1 rounded bg-surface-container text-on-surface-variant line-through opacity-50">02h</div>
+<div class="p-1 rounded bg-secondary-container text-on-secondary-container font-bold shadow-xs">04h</div>
+<div class="p-1 rounded bg-secondary-container text-on-secondary-container font-bold shadow-xs">06h</div>
+<div class="p-1 rounded bg-surface-container text-on-surface-variant line-through opacity-50">08h</div>
+<div class="p-1 rounded bg-surface-container text-on-surface-variant line-through opacity-50">10h</div>
+<div class="p-1 rounded bg-error-container text-error line-through font-semibold" title="Peak Tariff Exclusion">12h</div>
+<div class="p-1 rounded bg-error-container text-error line-through font-semibold" title="Peak Tariff Exclusion">14h</div>
+<div class="p-1 rounded bg-surface-container text-on-surface-variant line-through opacity-50">16h</div>
+<div class="p-1 rounded bg-surface-container text-on-surface-variant line-through opacity-50">18h</div>
+<div class="p-1 rounded bg-secondary-container text-on-secondary-container font-bold shadow-xs">20h</div>
+<div class="p-1 rounded bg-surface-container text-on-surface-variant line-through opacity-50">22h</div>
+</div>
+<div class="flex items-center gap-space-md text-label-sm text-on-surface-variant px-space-xs pt-1">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> Feasible Solution Window</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error"></span> Tariff Lockout</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-outline-variant"></span> Pressure/Overlap Violation</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high/40 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Optimal Global Schedule Found</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Slot: 04:30 - 06:00 • Cost minimization index: 0.93</span>
+</div>
+</div>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm" type="button">
+              Commit Plan
+            </button>
+</div>
+</div>
+</section>
+<section class="col-span-12 lg:col-span-6 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" id="module-astar">
+<div class="p-space-lg flex items-center justify-between bg-surface-container-low/40">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">alt_route</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Autonomous Equipment Navigation</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">A* Pathfinding • Tractor Unit T-1</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-right">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">Path Distance</span>
+<span class="font-data-mono text-headline-sm text-on-surface font-semibold">840 m</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">Fuel Saved</span>
+<span class="font-data-mono text-headline-sm text-secondary font-semibold">14.2%</span>
+</div>
+</div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md flex-1">
+<div class="relative w-full h-56 rounded-xl bg-surface-container overflow-hidden p-space-sm flex flex-col justify-between">
+<svg class="absolute inset-0 w-full h-full" fill="none" viewBox="0 0 500 200">
+<pattern height="25" id="grid-astar" patternUnits="userSpaceOnUse" width="25">
+<rect fill="none" height="25" width="25"></rect>
+<circle class="fill-outline-variant/60" cx="12.5" cy="12.5" r="0.75"></circle>
+</pattern>
+<rect fill="url(#grid-astar)" height="100%" width="100%"></rect>
+<rect class="fill-surface-dim/70 stroke-outline-variant/40" height="70" rx="6" width="90" x="180" y="40"></rect>
+<text class="fill-on-surface-variant font-data-mono text-[10px]" x="188" y="75">Sector B: Mud /</text>
+<text class="fill-on-surface-variant font-data-mono text-[10px]" x="188" y="88">High Soil Sinkage</text>
+<path class="opacity-70" d="M 120 150 L 360 150" stroke="#ba1a1a" stroke-dasharray="6 4" stroke-linecap="round" stroke-width="4"></path>
+<text class="fill-error font-data-mono text-[10px]" x="200" y="165">Active Irrigation Trench</text>
+<path d="M 50 160 L 130 110 L 160 30 L 320 25 L 420 80 L 440 140" stroke="#296b3c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+<circle class="fill-primary" cx="50" cy="160" r="6"></circle>
+<circle class="fill-secondary" cx="440" cy="140" r="7"></circle>
+</svg>
+<div class="relative z-10 flex justify-between items-start">
+<span class="font-data-mono text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/90 text-on-surface font-semibold shadow-xs">
+                Origin: Central Depot (Coords: [04, 12])
+              </span>
+<span class="font-data-mono text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/90 text-secondary font-semibold shadow-xs">
+                Target: Field C-4 Headland
+              </span>
+</div>
+<div class="relative z-10 flex justify-between items-end">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 text-on-surface-variant">
+                Heuristic: h(n) = Euclidean + Slip Cost (C_soil)
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold bg-surface-container-lowest/90 px-2 py-0.5 rounded">
+                Avoidance Succeeded: 2 Obstacles
+              </span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-space-sm text-on-surface">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Explored Nodes</span>
+<span class="font-data-mono text-headline-sm font-semibold">124</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Closed list count</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Soil Trafficability</span>
+<span class="font-data-mono text-headline-sm text-secondary font-semibold">91.4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Safe traction ratio</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Transit Duration</span>
+<span class="font-data-mono text-headline-sm font-semibold">4.8 min</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">@ 12 km/h autonomous</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1.5 text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">satellite_alt</span>
+<span>RTK-GPS Differential Correction ±2cm</span>
+</div>
+<button class="px-space-md py-space-xs rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-on-secondary-container transition-colors shadow-sm flex items-center gap-1" type="button">
+<span>Transmit Route to T-1</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<section class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm p-space-lg gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Integrated Diagnostic &amp; Pipeline Telemetry Logs</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Live event stream across classical reasoning algorithms and tensor models</p>
+</div>
+<div class="flex items-center gap-space-xs font-data-mono text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Telemetry Stream Synchronized: 10 sec ago</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-xs px-space-md font-semibold">Timestamp</th>
+<th class="py-space-xs px-space-md font-semibold">Model Pipeline</th>
+<th class="py-space-xs px-space-md font-semibold">Event Description</th>
+<th class="py-space-xs px-space-md font-semibold">Convergence / Status</th>
+<th class="py-space-xs px-space-md font-semibold text-right">Inference Delta</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface divide-y divide-surface-container-low">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-data-mono text-label-sm text-on-surface-variant">14:32:08.112</td>
+<td class="py-space-sm px-space-md font-semibold">K-Means Cluster Engine</td>
+<td class="py-space-sm px-space-md">Cluster reassignment complete for Salinas Parcel Sector 4. Shift: 0 fields.</td>
+<td class="py-space-sm px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Optimal</span>
+</td>
+<td class="py-space-sm px-space-md font-data-mono text-right text-label-sm">8.4ms</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-data-mono text-label-sm text-on-surface-variant">14:31:54.004</td>
+<td class="py-space-sm px-space-md font-semibold">AC-3 Constraint Engine</td>
+<td class="py-space-sm px-space-md">Arc consistency reduced domain D(pump_cycle) to 3 non-conflicting time slices.</td>
+<td class="py-space-sm px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Satisfied</span>
+</td>
+<td class="py-space-sm px-space-md font-data-mono text-right text-label-sm">1.8ms</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-data-mono text-label-sm text-on-surface-variant">14:30:12.780</td>
+<td class="py-space-sm px-space-md font-semibold">A* Navigation Planner</td>
+<td class="py-space-sm px-space-md">Recalculated trajectory for T-1 avoiding wet low-lying zone near Field B drainage.</td>
+<td class="py-space-sm px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Clear Path</span>
+</td>
+<td class="py-space-sm px-space-md font-data-mono text-right text-label-sm">14.1ms</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-data-mono text-label-sm text-on-surface-variant">14:28:44.291</td>
+<td class="py-space-sm px-space-md font-semibold">Agronomic Decision Tree</td>
+<td class="py-space-sm px-space-md">Rule AGR-DT-402 matched parcel conditions: Moisture &lt; 45% &amp; Rain &lt; 5mm.</td>
+<td class="py-space-sm px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Action Suggested</span>
+</td>
+<td class="py-space-sm px-space-md font-data-mono text-right text-label-sm">0.9ms</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<script>
+    function filterModules(type) {
+      const tabs = ['all', 'clustering', 'rules', 'csp', 'astar'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('tab-' + t);
+        if (btn) {
+          if (t === type) {
+            btn.className = 'tab-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary shadow-sm';
+          } else {
+            btn.className = 'tab-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm';
+          }
+        }
+      });
+
+      const modules = {
+        clustering: document.getElementById('module-clustering'),
+        rules: document.getElementById('module-rules'),
+        csp: document.getElementById('module-csp'),
+        astar: document.getElementById('module-astar')
+      };
+
+      Object.keys(modules).forEach(key => {
+        const el = modules[key];
+        if (!el) return;
+        if (type === 'all' || type === key) {
+          el.style.display = 'flex';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</div></main></div></body></html>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-bright":"#f8f9ff","on-tertiary-fixed":"#0b2006","surface-container-low":"#eff4ff","secondary-fixed":"#adf3b8","tertiary-fixed":"#cfebc1","on-primary":"#ffffff","surface-container":"#e6eeff","on-secondary-fixed":"#00210b","surface-tint":"#456555","outline-variant":"#c1c8c2","outline":"#727974","on-background":"#121c2a","on-primary-fixed":"#012114","on-tertiary-container":"#8ea882","on-primary-fixed-variant":"#2e4d3e","surface":"#f8f9ff","background":"#f8f9ff","on-tertiary-fixed-variant":"#364d2e","on-surface":"#121c2a","on-tertiary":"#ffffff","secondary":"#296b3c","inverse-surface":"#27313f","primary-container":"#1e3d2f","surface-container-lowest":"#ffffff","primary":"#06271a","on-error":"#ffffff","error":"#ba1a1a","on-secondary":"#ffffff","surface-container-highest":"#d9e3f6","inverse-primary":"#accebb","surface-variant":"#d9e3f6","inverse-on-surface":"#eaf1ff","secondary-fixed-dim":"#92d69d","tertiary-container":"#273d20","surface-dim":"#d0dbed","primary-fixed-dim":"#accebb","primary-fixed":"#c7ebd6","on-secondary-fixed-variant":"#0a5226","on-secondary-container":"#307142","secondary-container":"#adf3b8","surface-container-high":"#dee9fc","tertiary-fixed-dim":"#b3cea6","on-primary-container":"#86a895","on-error-container":"#93000a","tertiary":"#11270c","error-container":"#ffdad6","on-surface-variant":"#424844"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"0.75rem","space-xs":"0.25rem","space-2xl":"2.5rem","margin-sm":"1rem","margin-lg":"2rem","space-sm":"0.5rem","space-lg":"1.25rem","margin":"1.5rem","gutter-sm":"0.75rem","gutter":"1.25rem","space-xl":"1.75rem","gutter-lg":"1.5rem"},fontFamily:{"headline-lg":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"data-mono":["Inter"],"display-lg":["Inter"],"headline-sm":["Inter"],"headline-md":["Inter"],"label-sm":["Inter"],"display-lg-mobile":["Inter"],"body-sm":["Inter"],"body-md":["Inter"]},fontSize:{"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"500"}],"data-mono":["13px",{lineHeight:"18px",fontWeight:"500"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}],"display-lg-mobile":["26px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-screen w-60 bg-surface border-r border-outline-variant/40 z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline-variant/30"><img alt="AgroAI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WS9o9_h4OGsmHnX6NBzt9g6Z8N839pzzySGkYOcINXvi7ndiUQ7BiyelWkujiGyAXCAUtgTQpVuZdcbuX5L4vHJiSqI-XrO2Wl0j8dt8N13t9ztqOtbF55OPuG8Bd7NjXmQU6bOoWAnRpV-j8-g_xH6U72RHibMHPRcN8SXH2l3DZ_kMVVpAg3OWazB6fL9zqA0s5aqw1L2czQd18IK5VXJNV7bQ1bjpWP26-fBkx_pgAlH_iVtmfVF_0"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary leading-tight truncate">AgroAI</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Decision Support</span></div></div><div class="p-space-sm space-y-space-md"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Main</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#">Dashboard</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-farm" href="#">My Farm</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="fields" href="#">Fields</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="weather" href="#">Weather</a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">AI &amp; Analysis</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ai-analysis" href="#">AI Analysis</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="disease-detection" href="#">Disease Detection</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="irrigation-planner" href="#">Irrigation Planner</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="algorithms-and-theory" href="#">Algorithms &amp; Theory</a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Management</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="resources-and-sensors" href="#">Resources &amp; Sensors</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="history-and-logs" href="#">History &amp; Logs</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#">Settings</a></nav></div></div></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface"><div class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg bg-surface-container-lowest border border-outline-variant/40"><span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">FastAPI + Firebase (Healthy)</span></div></div></aside><div class="pl-60 flex flex-col min-h-screen"><header class="fixed top-0 left-60 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 z-40 px-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm min-w-0"><span class="material-symbols-outlined text-secondary text-[20px] shrink-0">eco</span><div class="flex items-center gap-space-xs truncate"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Green Valley Farm</span><span class="text-outline font-label-md text-label-md">•</span><span class="font-body-md text-body-md text-on-surface-variant truncate">Sector 4 — Salinas Valley, CA</span></div></div><div class="flex items-center gap-gutter-lg shrink-0"><div class="hidden xl:flex items-center gap-space-xs bg-surface px-space-md py-space-xs rounded-lg border border-outline-variant/30 text-on-surface-variant font-data-mono text-data-mono"><span class="material-symbols-outlined text-[18px] text-secondary">partly_cloudy_day</span><span>22°C Clear</span><span class="text-outline-variant">|</span><span>Humidity 58%</span><span class="text-outline-variant">|</span><span>Wind 9 km/h NW</span></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-error text-on-error rounded-full flex items-center justify-center font-label-sm text-label-sm font-semibold">2</span></button><div class="h-6 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtfGUWf3TBenBcYhZR2uRKuz84PeAkSSbZSIDAtsU9X-CDXdkPpfQN-udNW7R8tRXtnbmjcAKD0XtbSS1C-oqAy-O66WIILaCzECUYoU8TK9EEcTWO7pa7Gt7dua4k6Z2E9Ew5kum2E5jxuIYdrupJhI6lU647zszH5VDn4T36L58MEqXqtN9ROwgKRZuEvIFVlmq9t5SdNc_h7Kqs2UR7uwgY4_1-h7ikIz4jyAVY2erQH8wA-uqo"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Farm Operations Lead</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Context Ledger Bar -->
+<div class="w-full bg-surface-container-low px-margin-lg py-space-lg">
+<div class="max-w-[1680px] mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+<span>Immutable System Audit Trail</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant font-data-mono">ISO-22000 &amp; GAP Compliant</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Farm Operations &amp; Audit History</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-4xl">
+          Chronological ledger of automated AI dispatches, manual scout inspections, disease detections, and sensor telemetry events.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 flex-wrap">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-lowest text-on-surface font-label-md rounded-lg shadow-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">tune</span>
+<span>Filter Presets</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-primary text-on-primary font-label-md rounded-lg shadow-sm hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export Audit Log (CSV / JSON)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Multi-Tier Grid Container -->
+<div class="w-full px-margin-lg py-space-lg max-w-[1680px] mx-auto space-y-space-lg">
+<!-- KPI / Throughput Strip -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">7-Day Log Volume</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold mt-1">1,428</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +8.4% telemetry rate
+          </span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Autonomous Actions</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold mt-1">312 Cycles</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">99.1% execution fidelity</span>
+</div>
+<div class="p-space-xs rounded-lg bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Flagged Interventions</span>
+<span class="font-headline-lg text-headline-lg text-error font-semibold mt-1">14</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">3 active spore vectors</span>
+</div>
+<div class="p-space-xs rounded-lg bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[20px]">flag</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Mean Ingestion Latency</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold mt-1">18.4 ms</span>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5">Edge Broker (MQTT/CoAP)</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</div>
+</div>
+</div>
+<!-- Filter & Query Control Console -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-sm">
+<!-- Date Selector -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Time Window</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-on-surface-variant text-[18px] pointer-events-none">calendar_month</span>
+<select class="w-full h-9 pl-8 pr-7 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg appearance-none cursor-pointer focus:outline-none focus:bg-surface-container">
+<option>Last 7 Days: May 12 – May 19, 2025</option>
+<option>Past 24 Hours</option>
+<option>Last 30 Days: Full Agronomic Cycle</option>
+<option>Custom Date Span...</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Field Selector -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Field / Sector</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-on-surface-variant text-[18px] pointer-events-none">crop_square</span>
+<select class="w-full h-9 pl-8 pr-7 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg appearance-none cursor-pointer focus:outline-none focus:bg-surface-container">
+<option>All Fields (Complete Boundary)</option>
+<option>Field A (Corn)</option>
+<option>Field B-2 (Wheat)</option>
+<option>Field C-4 (Soybeans)</option>
+<option>Field D (Tomatoes)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Event Category -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Event Category</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-on-surface-variant text-[18px] pointer-events-none">category</span>
+<select class="w-full h-9 pl-8 pr-7 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg appearance-none cursor-pointer focus:outline-none focus:bg-surface-container">
+<option>All Events</option>
+<option>Irrigation Dispatch</option>
+<option>AI Recommendation</option>
+<option>Disease Detection</option>
+<option>Sensor Telemetry</option>
+<option>Manual Override</option>
+<option>Hardware Calibration</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Status Filter -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Status / State</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-on-surface-variant text-[18px] pointer-events-none">verified</span>
+<select class="w-full h-9 pl-8 pr-7 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg appearance-none cursor-pointer focus:outline-none focus:bg-surface-container">
+<option>All States</option>
+<option>Success / Verified</option>
+<option>Action Required / Flagged</option>
+<option>Advisory Dispatched</option>
+<option>Halted / Lockout</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Text Search -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Direct Search</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full h-9 pl-8 pr-3 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container" placeholder="Rule ID, tag, operator..." type="text"/>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant">
+<div class="flex items-center gap-space-xs text-label-sm font-label-sm">
+<span class="font-semibold text-on-surface">Active Filter Tokens:</span>
+<span class="inline-flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded text-on-surface">Range: Last 7 Days <button aria-label="Remove filter" class="hover:text-error">✕</button></span>
+<span class="inline-flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded text-on-surface">Domain: All Fields <button aria-label="Remove filter" class="hover:text-error">✕</button></span>
+<button class="text-secondary hover:underline ml-2">Clear all</button>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Showing 7 of 1,428 records</span>
+</div>
+</div>
+<!-- Main Workspace Split: Comprehensive Table + Live Detail Drawer View -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-lg items-start">
+<!-- Activity Ledger Table (8 Columns on Large Viewports) -->
+<div class="xl:col-span-8 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface">view_headline</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Ledger Stream</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-data-mono text-label-sm text-on-surface-variant uppercase">Stream Synchronized</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm uppercase tracking-wider">
+<th class="py-space-xs px-space-md font-semibold">Timestamp</th>
+<th class="py-space-xs px-space-sm font-semibold">Category</th>
+<th class="py-space-xs px-space-sm font-semibold">Field / Asset</th>
+<th class="py-space-xs px-space-md font-semibold">Event Description</th>
+<th class="py-space-xs px-space-sm font-semibold">Engine / Source</th>
+<th class="py-space-xs px-space-sm font-semibold text-center">Result State</th>
+<th class="py-space-xs px-space-md font-semibold text-right">Audit</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<!-- Row 1: Irrigation Dispatch Field A -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectAuditRecord('rec-1035')">
+<td class="py-space-sm px-space-md font-data-mono whitespace-nowrap text-on-surface-variant">
+<span class="font-semibold text-on-surface block">Today 10:35 AM</span>
+<span class="text-[11px] text-outline">10:35:12.448 UTC</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">water_drop</span>
+                    Irrigation
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap font-medium">Field A (Corn)</td>
+<td class="py-space-sm px-space-md max-w-xs">
+<p class="truncate font-body-sm text-body-sm text-on-surface font-medium">Completed 1,350 L automated center-pivot watering</p>
+<p class="truncate font-data-mono text-[11px] text-on-surface-variant">Cycle #IRR-2025-0842 • Duration 45m</p>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-data-mono text-label-sm text-on-surface">CSP + AC-3 Solver</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap text-center">
+<span class="inline-block px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm font-semibold">
+                    Success
+                  </span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap text-right">
+<button class="px-space-xs py-1 rounded hover:bg-surface-container text-secondary font-label-md inline-flex items-center gap-0.5" type="button">
+                    Inspect
+                    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Disease Detection Field D -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectAuditRecord('rec-1034')">
+<td class="py-space-sm px-space-md font-data-mono whitespace-nowrap text-on-surface-variant">
+<span class="font-semibold text-on-surface block">Today 08:30 AM</span>
+<span class="text-[11px] text-outline">08:30:04.102 UTC</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm">
+<span class="material-symbols-outlined text-[13px]">coronavirus</span>
+                    Disease
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap font-medium">Field D (Tomatoes)</td>
+<td class="py-space-sm px-space-md max-w-xs">
+<p class="truncate font-body-sm text-body-sm text-error font-medium">Foliar scan: Early Blight (Alternaria solani)</p>
+<p class="truncate font-data-mono text-[11px] text-on-surface-variant">Confidence: 94.8% • Camera Trap D-North</p>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-data-mono text-label-sm text-on-surface">CNN ResNet-50</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap text-center">
+<span class="inline-block px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm font-semibold">
+                    Action Flagged
+                  </span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap text-right">
+<button class="px-space-xs py-1 rounded hover:bg-surface-container text-secondary font-label-md inline-flex items-center gap-0.5" type="button">
+                    Inspect
+                    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Scheduled Cron Initiation -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectAuditRecord('rec-1033')">
+<td class="py-space-sm px-space-md font-data-mono whitespace-nowrap text-on-surface-variant">
+<span class="font-semibold text-on-surface block">Today 06:00 AM</span>
+<span class="text-[11px] text-outline">06:00:00.015 UTC</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">water_drop</span>
+                    Irrigation
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap font-medium">Field A (Corn)</td>
+<td class="py-space-sm px-space-md max-w-xs">
+<p class="truncate font-body-sm text-body-sm text-on-surface">Scheduled cycle initiated on Pump P-1</p>
+<p class="truncate font-data-mono text-[11px] text-on-surface-variant">Flow rate nominal @ 180 L/min</p>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-data-mono text-label-sm text-on-surface">Automated Cron + PLC</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap text-center">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm font-semibold">
+                    Completed
+                  </span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap text-right">
+<button class="px-space-xs py-1 rounded hover:bg-surface-container text-secondary font-label-md inline-flex items-center gap-0.5" type="button">
+                    Inspect
+                    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Sensor Moisture Alert -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectAuditRecord('rec-1032')">
+<td class="py-space-sm px-space-md font-data-mono whitespace-nowrap text-on-surface-variant">
+<span class="font-semibold text-on-surface block">Yesterday 16:30 PM</span>
+<span class="text-[11px] text-outline">23:30:19.822 UTC</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">sensors</span>
+                    Sensor
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap font-medium">Field B-2 (Wheat)</td>
+<td class="py-space-sm px-space-md max-w-xs">
+<p class="truncate font-body-sm text-body-sm text-on-surface">Soil moisture dropped past 45% critical threshold</p>
+<p class="truncate font-data-mono text-[11px] text-error font-medium">Instant reading: 42% @ 20cm root depth</p>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-data-mono text-label-sm text-on-surface">Telemetry Probe SN-204</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap text-center">
+<span class="inline-block px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm font-semibold">
+                    Advisory
+                  </span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap text-right">
+<button class="px-space-xs py-1 rounded hover:bg-surface-container text-secondary font-label-md inline-flex items-center gap-0.5" type="button">
+                    Inspect
+                    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: AI Recommendation Rule -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectAuditRecord('rec-1031')">
+<td class="py-space-sm px-space-md font-data-mono whitespace-nowrap text-on-surface-variant">
+<span class="font-semibold text-on-surface block">Yesterday 14:15 PM</span>
+<span class="text-[11px] text-outline">21:15:02.771 UTC</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">psychology</span>
+                    AI Recom
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap font-medium">Field C-4 (Soybeans)</td>
+<td class="py-space-sm px-space-md max-w-xs">
+<p class="truncate font-body-sm text-body-sm text-on-surface">Rule DT-402 recommended drainage verification</p>
+<p class="truncate font-data-mono text-[11px] text-on-surface-variant">Flagged secondary soil-borne pathogen risk</p>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-data-mono text-label-sm text-on-surface">Decision Tree Engine</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap text-center">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm font-semibold">
+                    Dispatched
+                  </span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap text-right">
+<button class="px-space-xs py-1 rounded hover:bg-surface-container text-secondary font-label-md inline-flex items-center gap-0.5" type="button">
+                    Inspect
+                    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 6: Pathfinding Navigation -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectAuditRecord('rec-1030')">
+<td class="py-space-sm px-space-md font-data-mono whitespace-nowrap text-on-surface-variant">
+<span class="font-semibold text-on-surface block">Yesterday 11:20 AM</span>
+<span class="text-[11px] text-outline">18:20:41.229 UTC</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">alt_route</span>
+                    Pathfinding
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap font-medium">Tractor T-1 (Fleet)</td>
+<td class="py-space-sm px-space-md max-w-xs">
+<p class="truncate font-body-sm text-body-sm text-on-surface">Computed optimal headland navigation trajectory</p>
+<p class="truncate font-data-mono text-[11px] text-on-surface-variant">Bypassed wet loam soil zone in Polygon-8</p>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-data-mono text-label-sm text-on-surface">A* Search Algorithm</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap text-center">
+<span class="inline-block px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm font-semibold">
+                    Fuel -14.2%
+                  </span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap text-right">
+<button class="px-space-xs py-1 rounded hover:bg-surface-container text-secondary font-label-md inline-flex items-center gap-0.5" type="button">
+                    Inspect
+                    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 7: Hardware Calibration -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectAuditRecord('rec-1029')">
+<td class="py-space-sm px-space-md font-data-mono whitespace-nowrap text-on-surface-variant">
+<span class="font-semibold text-on-surface block">May 17, 09:00 AM</span>
+<span class="text-[11px] text-outline">16:00:00.000 UTC</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm">
+<span class="material-symbols-outlined text-[13px]">handyman</span>
+                    Calibration
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap font-medium">Pump P-2 (Sector 4)</td>
+<td class="py-space-sm px-space-md max-w-xs">
+<p class="truncate font-body-sm text-body-sm text-on-surface">Flow sensor recalibrated post-cleaning</p>
+<p class="truncate font-data-mono text-[11px] text-on-surface-variant">Signed off by S. Jenkins (Field Lead)</p>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-data-mono text-label-sm text-on-surface">Manual Operations</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap text-center">
+<span class="inline-block px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm font-semibold">
+                    Verified OK
+                  </span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap text-right">
+<button class="px-space-xs py-1 rounded hover:bg-surface-container text-secondary font-label-md inline-flex items-center gap-0.5" type="button">
+                    Inspect
+                    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-data-mono text-label-sm text-on-surface-variant">
+            Page 1 of 204 • SHA256 Ledger Block: <code class="text-on-surface">8f3b...e4a1</code>
+</span>
+<div class="flex items-center gap-1">
+<button class="px-space-xs py-1 rounded bg-surface-container text-on-surface font-label-sm hover:bg-surface-container-high disabled:opacity-40" disabled="">Previous</button>
+<button class="px-2 py-1 rounded bg-primary text-on-primary font-label-sm">1</button>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm hover:bg-surface-container-high">2</button>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm hover:bg-surface-container-high">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm hover:bg-surface-container-high">204</button>
+<button class="px-space-xs py-1 rounded bg-surface-container text-on-surface font-label-sm hover:bg-surface-container-high">Next</button>
+</div>
+</div>
+</div>
+<!-- Audit Event Detail Drawer / Expanded Panel (4 Columns) -->
+<div class="xl:col-span-4 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Audit Event Detail</h2>
+</div>
+<span class="font-data-mono text-label-sm text-secondary bg-secondary-container px-2 py-0.5 rounded">ID: #IRR-1035</span>
+</div>
+<div class="p-space-md space-y-space-md">
+<!-- Verification Summary Banner -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-on-surface font-semibold">Algorithmic Dispatch Verified</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Automated center-pivot run executed within prescribed soil matric potential boundaries.</span>
+</div>
+</div>
+<!-- Key Latency and Execution Metadata -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface p-space-xs rounded-lg">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">Solver Latency</span>
+<span class="font-data-mono text-headline-sm font-semibold text-on-surface">14.2 ms</span>
+</div>
+<div class="bg-surface p-space-xs rounded-lg">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">Telemetry Drift</span>
+<span class="font-data-mono text-headline-sm font-semibold text-secondary">0.02 bar</span>
+</div>
+</div>
+<!-- Input Parameters Table -->
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Input State Boundary</span>
+<div class="bg-surface rounded-lg p-space-xs font-data-mono text-[12px] space-y-1">
+<div class="flex justify-between py-0.5">
+<span class="text-on-surface-variant">Crop Type</span>
+<span class="font-semibold text-on-surface">Zea mays (Field A, V6)</span>
+</div>
+<div class="flex justify-between py-0.5">
+<span class="text-on-surface-variant">Pre-irrigation Moisture</span>
+<span class="font-semibold text-on-surface">43.8% volumetric</span>
+</div>
+<div class="flex justify-between py-0.5">
+<span class="text-on-surface-variant">ET0 Estimate (Penman-Monteith)</span>
+<span class="font-semibold text-on-surface">5.42 mm/day</span>
+</div>
+<div class="flex justify-between py-0.5">
+<span class="text-on-surface-variant">Tariff Window</span>
+<span class="font-semibold text-secondary">Off-Peak (Tier 1)</span>
+</div>
+</div>
+</div>
+<!-- Low Level Execution Telemetry Log -->
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">PLC Execution Stream</span>
+<div class="bg-primary text-on-primary rounded-lg p-space-sm font-data-mono text-[11px] leading-relaxed overflow-x-auto max-h-44">
+<p class="text-on-primary-container">10:35:10.012 [INFO] SolvInit: CSP AC-3 started</p>
+<p class="text-on-primary-container">10:35:10.026 [OK] Arc-consistency stabilized (pruned 42 vars)</p>
+<p class="text-primary-fixed">10:35:11.104 [PLC] Command: ACTUATE_PUMP_1 (Target: 1350L)</p>
+<p class="text-on-primary">10:35:11.200 [PLC] Valve V-12: OPEN (Confirmed 4.2 bar)</p>
+<p class="text-on-primary">11:20:12.448 [PLC] Totalizer: 1,350.4L dispensed. FLOW_HALT</p>
+<p class="text-secondary-fixed">11:20:13.001 [SYS] Event logged to blockchain replica</p>
+</div>
+</div>
+<!-- Audit Actions -->
+<div class="flex items-center justify-between pt-space-xs">
+<button class="inline-flex items-center gap-1 font-label-sm text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+              Raw JSON Snapshot
+            </button>
+<button class="px-space-sm py-1 rounded bg-surface-container text-primary font-label-sm hover:bg-surface-container-high transition-colors">
+              Re-run Simulation
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- AI Decision Audit Section: Algorithmic Transparency Breakdown -->
+<div class="space-y-space-md pt-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs text-secondary font-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">hub</span>
+<span>Explainable Agronomic Intelligence</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">Algorithmic Decision Transparency</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-space-sm py-1 rounded-full">
+          Heuristic Weight Audit: Strict Constraint Model v4.8
+        </span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-lg">
+<!-- Algorithm Card 1: CSP & AC-3 Solver -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">Constraint Satisfaction</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-0.5">CSP &amp; AC-3 Irrigation Solve #842</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-data-mono text-[11px] font-semibold">14.2ms solve</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Variables: 12 time slots, 3 pumps. Pruned 84.2% infeasible domain assignments due to peak electrical tariff lockout (12:00-16:00) and root zone water saturation thresholds.
+            </p>
+<!-- Inline Metric Visualization: Arc Pruning Ratio -->
+<div class="space-y-1.5 pt-space-xs">
+<div class="flex justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Domain Pruning Efficiency</span>
+<span class="font-data-mono font-semibold text-on-surface">84.2% pruned</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full w-[84.2%]"></div>
+<div class="bg-secondary-fixed h-full w-[15.8%]"></div>
+</div>
+<div class="flex justify-between font-data-mono text-[10px] text-on-surface-variant">
+<span>Infeasible nodes: 808</span>
+<span class="text-secondary font-medium">Viable schedule: 152</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between">
+<span class="font-data-mono text-[12px] text-on-surface font-medium">Optimal Window: 05:45 - 06:30</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+</div>
+</div>
+<!-- Algorithm Card 2: K-Means Field Clustering -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">Unsupervised Soil Partition</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-0.5">K-Means Field Clustering #129</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-data-mono text-[11px] font-semibold">k = 4 Zones</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Partitioned 8 active zones into 4 uniform hydraulic conductivity clusters based on ambient canopy temperature vs. root-zone moisture gradients (Silhouette: 0.74).
+            </p>
+<!-- Inline Visualization: Cluster Silhouette Density -->
+<div class="space-y-1.5 pt-space-xs">
+<div class="flex justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Cluster Separation (Silhouette)</span>
+<span class="font-data-mono font-semibold text-secondary">0.74 Score</span>
+</div>
+<div class="grid grid-cols-4 gap-1 h-2">
+<div class="bg-primary rounded-full"></div>
+<div class="bg-primary-container rounded-full"></div>
+<div class="bg-secondary rounded-full"></div>
+<div class="bg-surface-tint rounded-full"></div>
+</div>
+<div class="flex justify-between font-data-mono text-[10px] text-on-surface-variant">
+<span>Cluster 1: Silt (Heavy)</span>
+<span>Cluster 4: Sand-Loam</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between">
+<span class="font-data-mono text-[12px] text-on-surface font-medium">Variance Explained: 89.2%</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">analytics</span>
+</div>
+</div>
+<!-- Algorithm Card 3: CNN Foliar Classifier -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-error font-semibold uppercase tracking-wider">Computer Vision Inference</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-0.5">CNN Foliar Classifier Run #312</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-data-mono text-[11px] font-semibold">Flagged (94.8%)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Processed specimen IMG_4032 via MobileNetV3 / ResNet-50 backbone. Identified target-shaped concentric lesion necrosis indicative of Early Blight pathogen.
+            </p>
+<!-- Specimen Preview Mockup with AI Mask -->
+<div class="relative rounded-lg overflow-hidden h-24 bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="High resolution macro photograph of a tomato plant leaf with concentric circular brown lesions from early blight disease under bright natural greenhouse daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnzDOJjH9_ePfoWBXpxtp9PfF1f_nUY03L803aeM1a9SrECTzVevJ0Ypt7fwM2bn_Z05JS_Y2z_8y_DgPcWGH1VLtMUDrGJ6zXtUP7uPNWShbvNLBKhqb4j-euFmFj7fsdUIsrJXPSksy_F8UOJCbfBpURSUkdDZjtHdksukAjFhh_uyvkgnKJ_OEVBmFA2-_vVTIth6av7OrJo47gyYyh5la8oKoNkzm5ECOswS-jCRxiZJxrbNdn"/>
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[0.5px] flex items-center justify-between px-space-md">
+<div class="bg-surface-container-lowest/90 px-2 py-1 rounded shadow-sm">
+<span class="font-data-mono text-[11px] font-semibold text-error">Bbox: [312, 140, 88, 92]</span>
+</div>
+<div class="bg-surface-container-lowest/90 px-2 py-1 rounded shadow-sm">
+<span class="font-data-mono text-[11px] font-semibold text-on-surface">Grad-CAM Overlay OK</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between">
+<span class="font-data-mono text-[12px] text-error font-semibold">Intervention: Copper Fungicide 2.4L</span>
+<span class="material-symbols-outlined text-[18px] text-error">warning</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Telemetry Protocol Sign-off Strip -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="p-space-xs rounded-lg bg-surface-container-lowest text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Ledger Cryptographic Attestation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">All 1,428 dispatch events are anchored via HMAC SHA-256 blocks signed by edge gateway AGRO-GW-04.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs bg-surface-container-lowest text-on-surface font-label-md rounded-lg shadow-sm hover:bg-surface-container transition-colors" type="button">
+          Verify Merkle Proof
+        </button>
+<button class="px-space-md py-space-xs bg-primary text-on-primary font-label-md rounded-lg shadow-sm hover:bg-primary-container transition-colors" type="button">
+          Generate USDA / GAP Packet
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Row Selection Behavior Script -->
+<script>
+    function selectAuditRecord(id) {
+      console.log("Inspecting audit record: " + id);
+      // Feedback pulse on right detail drawer
+      const detailBox = document.querySelector('.xl\\:col-span-4');
+      if (detailBox) {
+        detailBox.classList.add('transition-all', 'duration-150', 'opacity-80');
+        setTimeout(() => {
+          detailBox.classList.remove('opacity-80');
+        }, 150);
+      }
+    }
+  </script>
+</div></main></div></body></html>

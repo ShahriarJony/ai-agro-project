@@ -1,0 +1,5 @@
+field_id,crop,soil_moisture,soil_ph,temperature,humidity,rainfall,water_availability
+Field_A,Rice,75,6.5,28,70,15,8200
+Field_B,Tomato,45,6.2,31,60,8,8200
+Field_C,Maize,20,5.9,34,50,2,8200
+Field_D,Potato,10,5.7,35,45,1,8200

@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ==========================================
+    // AGROAI FIRESTORE SECURITY RULES
+    // Allows full read and write access for all application collections
+    // ==========================================
+
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+
+    match /farms/{farmId} {
+      allow read, write: if true;
+    }
+
+    match /fields/{fieldId} {
+      allow read, write: if true;
+    }
+
+    match /field_assignments/{assignmentId} {
+      allow read, write: if true;
+    }
+
+    match /field_data/{dataId} {
+      allow read, write: if true;
+    }
+
+    match /field_images/{imageId} {
+      allow read, write: if true;
+    }
+
+    match /notifications/{notificationId} {
+      allow read, write: if true;
+    }
+
+    match /activity_logs/{logId} {
+      allow read, write: if true;
+    }
+
+    match /logs/{logId} {
+      allow read, write: if true;
+    }
+
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+

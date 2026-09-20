@@ -1,0 +1,357 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline":"#727974","surface-container-lowest":"#ffffff","on-tertiary-fixed":"#0b2006","on-primary-fixed":"#012114","on-primary-fixed-variant":"#2e4d3e","primary-fixed":"#c7ebd6","secondary-fixed":"#adf3b8","outline-variant":"#c1c8c2","secondary-fixed-dim":"#92d69d","on-secondary":"#ffffff","surface-dim":"#d0dbed","on-secondary-container":"#307142","on-secondary-fixed":"#00210b","background":"#f8f9ff","tertiary-fixed-dim":"#b3cea6","primary-container":"#1e3d2f","error-container":"#ffdad6","secondary-container":"#adf3b8","surface-bright":"#f8f9ff","surface":"#f8f9ff","error":"#ba1a1a","secondary":"#296b3c","on-primary":"#ffffff","on-surface":"#121c2a","tertiary-container":"#273d20","on-error":"#ffffff","surface-container-high":"#dee9fc","on-surface-variant":"#424844","surface-container-highest":"#d9e3f6","primary":"#06271a","surface-container-low":"#eff4ff","inverse-surface":"#27313f","inverse-primary":"#accebb","on-error-container":"#93000a","primary-fixed-dim":"#accebb","on-primary-container":"#86a895","on-secondary-fixed-variant":"#0a5226","tertiary-fixed":"#cfebc1","surface-variant":"#d9e3f6","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#364d2e","surface-tint":"#456555","on-background":"#121c2a","surface-container":"#e6eeff","tertiary":"#11270c","inverse-on-surface":"#eaf1ff","on-tertiary-container":"#8ea882"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-sm":"1rem","gutter":"1.25rem","space-lg":"1.25rem","gutter-lg":"1.5rem","space-xl":"1.75rem","space-2xl":"2.5rem","space-sm":"0.5rem","space-md":"0.75rem","gutter-sm":"0.75rem","space-xs":"0.25rem","margin-lg":"2rem","margin":"1.5rem"},fontFamily:{"headline-md":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"],"display-lg-mobile":["Inter"],"body-md":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"data-mono":["Inter"],"headline-lg":["Inter"],"display-lg":["Inter"],"body-sm":["Inter"]},fontSize:{"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"24px",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"display-lg-mobile":["26px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"500"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}],"data-mono":["13px",{lineHeight:"18px",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-screen w-60 bg-surface border-r border-outline-variant/40 z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline-variant/30"><img alt="AgroAI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WS9o9_h4OGsmHnX6NBzt9g6Z8N839pzzySGkYOcINXvi7ndiUQ7BiyelWkujiGyAXCAUtgTQpVuZdcbuX5L4vHJiSqI-XrO2Wl0j8dt8N13t9ztqOtbF55OPuG8Bd7NjXmQU6bOoWAnRpV-j8-g_xH6U72RHibMHPRcN8SXH2l3DZ_kMVVpAg3OWazB6fL9zqA0s5aqw1L2czQd18IK5VXJNV7bQ1bjpWP26-fBkx_pgAlH_iVtmfVF_0"><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary leading-tight truncate">AgroAI</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Decision Support</span></div></div><div class="p-space-sm space-y-space-md"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Main</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">home</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-farm" href="#"><span class="material-symbols-outlined text-[18px]">location_on</span><span>My Farm</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="fields" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span>Fields</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="weather" href="#"><span class="material-symbols-outlined text-[18px]">wb_sunny</span><span>Weather</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">AI &amp; Analysis</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ai-analysis" href="#"><span class="material-symbols-outlined text-[18px]">memory</span><span>AI Analysis</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-semibold rounded-lg" data-path="disease-detection" href="#"><span class="material-symbols-outlined text-[18px]">filter_center_focus</span><span>Disease Detection</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="irrigation-planner" href="#"><span class="material-symbols-outlined text-[18px]">water_drop</span><span>Irrigation Planner</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="algorithms-and-theory" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span>Algorithms &amp; Theory</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Management</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="resources-and-sensors" href="#"><span class="material-symbols-outlined text-[18px]">dns</span><span>Resources &amp; Sensors</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="history-and-logs" href="#"><span class="material-symbols-outlined text-[18px]">schedule</span><span>History &amp; Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>Settings</span></a></nav></div></div></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface"><div class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg bg-surface-container-lowest border border-outline-variant/40"><span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">FastAPI + Firebase (Healthy)</span></div></div></aside><div class="pl-60 flex flex-col min-h-screen"><header class="fixed top-0 left-60 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 z-40 px-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm min-w-0"><span class="material-symbols-outlined text-secondary text-[20px] shrink-0">eco</span><div class="flex items-center gap-space-xs truncate"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Green Valley Farm</span><span class="text-outline font-label-md text-label-md">•</span><span class="font-body-md text-body-md text-on-surface-variant truncate">Sector 4 — Salinas Valley, CA</span></div></div><div class="flex items-center gap-gutter-lg shrink-0"><div class="hidden xl:flex items-center gap-space-xs bg-surface px-space-md py-space-xs rounded-lg border border-outline-variant/30 text-on-surface-variant font-data-mono text-data-mono"><span class="material-symbols-outlined text-[18px] text-secondary">partly_cloudy_day</span><span>22°C Clear</span><span class="text-outline-variant">|</span><span>Humidity 58%</span><span class="text-outline-variant">|</span><span>Wind 9 km/h NW</span></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-error text-on-error rounded-full flex items-center justify-center font-label-sm text-label-sm font-semibold">2</span></button><div class="h-6 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtfGUWf3TBenBcYhZR2uRKuz84PeAkSSbZSIDAtsU9X-CDXdkPpfQN-udNW7R8tRXtnbmjcAKD0XtbSS1C-oqAy-O66WIILaCzECUYoU8TK9EEcTWO7pa7Gt7dua4k6Z2E9Ew5kum2E5jxuIYdrupJhI6lU647zszH5VDn4T36L58MEqXqtN9ROwgKRZuEvIFVlmq9t5SdNc_h7Kqs2UR7uwgY4_1-h7ikIz4jyAVY2erQH8wA-uqo"><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Farm Operations Lead</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="p-margin md:p-margin-lg space-y-gutter-lg max-w-[1600px] mx-auto w-full">
+<!-- Header Section with Model Spec Pill Bar -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="space-y-space-xs max-w-3xl">
+<div class="flex items-center gap-space-sm text-secondary">
+<span class="material-symbols-outlined text-[20px]">biotech</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Computer Vision Diagnostics</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface font-semibold tracking-tight">Plant Pathology &amp; Disease Detection</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Convolutional Neural Network (CNN) diagnosis trained on over 54,000 multi-crop foliar specimens.</p>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface-variant font-data-mono text-data-mono">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+<span class="truncate">Architecture: MobileNetV3 / ResNet-50 • Test Acc: 96.8% • Inference: PyTorch Mobile</span>
+</div>
+</div>
+<!-- Main Workspace Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-lg">
+<!-- Left Column: Upload, Specimen Viewer & Telemetry (7 Cols on XL) -->
+<div class="xl:col-span-7 flex flex-col space-y-gutter">
+<!-- Active Specimen Inspection Stage -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Stage Top Bar -->
+<div class="flex items-center justify-between px-space-lg py-space-md bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Foliar Inspection Stage</span>
+<span class="px-space-xs py-0.5 rounded bg-secondary/15 text-secondary font-label-sm text-label-sm font-semibold">CNN Analysis Active</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-on-surface bg-surface px-space-sm py-1 rounded text-label-md font-label-md shadow-xs transition-colors" id="toggle-bounding-box" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Bounding Boxes</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface transition-colors" title="Zoom In" type="button">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface transition-colors" title="Fullscreen View" type="button">
+<span class="material-symbols-outlined text-[20px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Specimen Display Canvas with Neural Overlay -->
+<div class="relative w-full aspect-[4/3] bg-on-surface flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover select-none" data-alt="Macro high-resolution agronomic photography of a Solanum lycopersicum tomato leaf showing distinct chlorotic concentric ring lesions and necrotic tissue caused by Alternaria solani early blight. Daylight studio lighting, muted natural green foliage tones, crisp botanical precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAugSH33775WYF0G_UXGbv6PJQrGANb3Vn1FyGK-utdpRrvT-OMjKv1WjRKj0Sqe9ZVyRBJO8-HyIIjM8h6FaCnuqzEfAZUhV_2vLNAUivygugfRQPT6ZFW3iw4F_lv09vq0bFKEJbt2JMr7Xzf7s8zoSnALHjoGns89oyv190uVDGtKL0IMKQUrfEOK5l1W4tZiwy0rVK7b_KQk9A9MSKqOw67ujK0Sz3j6flSSn90hGKZBh-GwIXn">
+<!-- Neural Network Detection Bounding Box 1 -->
+<div class="absolute top-[28%] left-[34%] w-[38%] h-[34%] rounded shadow-lg pointer-events-auto transition-all duration-300" id="bbox-1" style="background-color: rgba(222, 233, 252, 0.15); outline: 2px solid #ba1a1a;">
+<div class="absolute -top-6 left-0 flex items-center gap-1 bg-error text-on-error px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold shadow-sm">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>Lesion Cluster 1 (Prob: 0.94)</span>
+</div>
+<!-- Inner Crosshair Grid Overlay -->
+<div class="w-full h-full relative opacity-40">
+<div class="absolute inset-x-0 top-1/2 h-[1px] bg-error"></div>
+<div class="absolute inset-y-0 left-1/2 w-[1px] bg-error"></div>
+</div>
+</div>
+<!-- Subtle Secondary Micro-Lesion Detection Bounding Box 2 -->
+<div class="absolute top-[66%] left-[68%] w-[18%] h-[18%] rounded pointer-events-auto transition-all duration-300" id="bbox-2" style="background-color: rgba(222, 233, 252, 0.12); outline: 1.5px dashed #296b3c;">
+<div class="absolute -bottom-5 right-0 bg-primary-container text-on-primary px-1.5 py-0.5 rounded text-label-sm font-label-sm">
+<span>Cluster 2 (0.78)</span>
+</div>
+</div>
+<!-- Optical Grid Lines & Status Overlay -->
+<div class="absolute bottom-3 left-3 bg-inverse-surface/80 backdrop-blur-md px- space-sm py-1 rounded text-inverse-on-surface font-data-mono text-data-mono flex items-center gap-space-sm">
+<span>FOV: 85mm</span>
+<span>•</span>
+<span>Res: 4032×3024</span>
+<span>•</span>
+<span class="text-secondary-fixed">Spectral: RGB Normalized</span>
+</div>
+</div>
+<!-- Metadata Specimen Bar -->
+<div class="p-space-md grid grid-cols-2 sm:grid-cols-4 gap-space-md bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Field Origin</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Field D (Sector 2)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Crop / Genotype</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Tomato (S. lycopersicum)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Sample Date</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Today, 07:45 AM</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Captured By</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">S. Jenkins (Sensor)</span>
+</div>
+</div>
+</div>
+<!-- Upload & Camera Ingestion Panel -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">New Specimen Ingestion</h2>
+<span class="font-label-md text-label-md text-on-surface-variant">Drag or capture via mobile client</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Drag & Drop Zone -->
+<label class="md:col-span-2 cursor-pointer flex flex-col items-center justify-center p-space-lg rounded-lg bg-surface hover:bg-surface-container transition-all group text-center space-y-space-xs">
+<input accept="image/*" class="hidden" id="leaf-uploader" type="file">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Drop foliar imagery here</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Supports high-res JPG, PNG, RAW up to 25MB</span>
+</label>
+<!-- Direct Field Capture Action -->
+<div class="flex flex-col justify-between p-space-md rounded-lg bg-surface-container-low space-y-space-sm">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface font-headline-sm text-headline-sm font-semibold mb-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">photo_camera</span>
+<span>Field Sync</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Connect Bluetooth macro-lens sensor or use attached tablet camera.</p>
+</div>
+<button class="w-full py-space-sm px-space-md bg-primary-container hover:bg-primary text-on-primary rounded-lg font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span>Trigger Camera</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Recent Specimens Carousel/Thumbnails -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Recent Field Scans (Past 48h)</span>
+<a class="font-label-md text-label-md text-secondary hover:underline font-semibold" href="#">View All 38 Samples</a>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+<div class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="relative aspect-video rounded overflow-hidden mb-1.5">
+<img class="w-full h-full object-cover" data-alt="Close up photography of healthy green bell pepper foliage with vibrant chlorophyll pigmentation under balanced natural field lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlrYHd7DG_EPA6c23_lo6ZGd1uJgrzK6FIcQE3y4bUmirYoMeMoXSTPmO5Cs6Iv9Vpl75UrZFBOUXqFzC65hBVQNsPIirPl1B6grStQtFcyuOg9XHQHVs5DHrKsVQnqIBR6opLV8C0CfsjqTruw2BwMIJVSZJy1WP0y4JcZkeJVP_qqu2TrHpsy_QHy9l0vaD5lPfc4X_4mjq_9ws-9FqZX8jjDFO-fSk-FzLMdaRtwDbj-s-11jdO">
+<span class="absolute top-1 right-1 bg-surface-container-lowest text-secondary font-label-sm text-label-sm px-1 rounded shadow-xs">99.1% Clean</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-semibold truncate">Field B • Bell Pepper</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">No anomalies detected</p>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="relative aspect-video rounded overflow-hidden mb-1.5">
+<img class="w-full h-full object-cover" data-alt="Agricultural foliar specimen of sweet corn leaf exhibiting early chlorotic streaking and rust fungus pustules, clinical macro perspective." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMgwTk3dxG9O1xKrfT6puik8OXizAE-w_XMiCm0Q5f_4_3orEX0Hz4qJqWLxZIVpxFFM5IFtJUHyRVt1LGYKYmhl64HWQtJ2lsSAh-YC-GtDT_p3I_0K3kJf0aTwa8WrnxiMlgwwpN6aKMEXgXN-tqGLFWNZqiCAJx4B4VcjA_nArVGQI6p7kTmepzS4ichuCnW4M3e-lUe-yxtAoNcZujkRJ7FCj-MOoh2ctZqAQip1Awm46zJO_f">
+<span class="absolute top-1 right-1 bg-error text-on-error font-label-sm text-label-sm px-1 rounded shadow-xs">Common Rust</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-semibold truncate">Field A • Sweet Corn</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Pustule cluster Stage 1</p>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="relative aspect-video rounded overflow-hidden mb-1.5">
+<img class="w-full h-full object-cover" data-alt="Grapevine leaf specimen showing subtle downy mildew lesions and yellowish oil spots on the adaxial surface, macro detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJIDBH0gXiF4MWurn1NV-N6b9l4XPYk36gWayUzJL5BEdAMjcp17EkP7JLzE8W-ckQzt1ToluZ2DICZRJfIQXfZrAklHzYxehnVq7JEB0kh5YOaVSrZptDtY2h8Vz-L8opnAr3Ldaup52tqjJsXQGk_Lt_5J8h3Z1SjM6i0ImpeXDlkoTf-tRlJB0DWKqTNkLEfZBjlChhgrNjXhX6J6FY_U2LZhBGkUWPSa-_l051KEhy4vejmnqb">
+<span class="absolute top-1 right-1 bg-surface-container-lowest text-secondary font-label-sm text-label-sm px-1 rounded shadow-xs">Mildew Obs.</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-semibold truncate">Vineyard Block 3</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Monitoring required</p>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="relative aspect-video rounded overflow-hidden mb-1.5">
+<img class="w-full h-full object-cover" data-alt="Botanical specimen of crisp organic romaine lettuce leaves displaying vigorous vegetative health without any pathology or tip burn." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCutlpoHUvCpYc3DPOl_KcvsRb8tU1scdvhJs1G8vdfytvRJlE2E3yrrl7MGMry2OPD97v5mSsHuZa9476sQ0DaYLT7uKbfoigFFnx5qaeiDc6obizCVifBHb1SSQezgIEsaR-R995MSC-2QnV_d79OX1odmh1JOmArdtElCb1OCazKEdbM3C4a1-f5e3jjPwNhEEzA3qw7KebpW6s1TSim7QwmlWhrSlppt7LP1L05pHhQGVQh3LPK">
+<span class="absolute top-1 right-1 bg-surface-container-lowest text-secondary font-label-sm text-label-sm px-1 rounded shadow-xs">Healthy</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-semibold truncate">Field C • Romaine</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Vegetative peak</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Pathological Analysis & Agronomic Decisions (5 Cols on XL) -->
+<div class="xl:col-span-5 flex flex-col space-y-gutter">
+<!-- Primary Diagnosis Clinical Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold text-error">Pathogen Detected</span>
+<div class="flex items-center gap-1 text-on-surface-variant font-data-mono text-data-mono">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Model Conf: 0.948</span>
+</div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Early Blight</h2>
+<p class="font-body-md text-body-md text-on-surface-variant italic">Alternaria solani</p>
+</div>
+<!-- Confidence Bar Meter -->
+<div class="space-y-space-xs bg-surface-container-low p-space-md rounded-lg">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Diagnostic Confidence</span>
+<span class="font-headline-lg text-headline-lg text-secondary font-semibold">94.8%</span>
+</div>
+<!-- Quantitative Gauge -->
+<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 94.8%;"></div>
+</div>
+<div class="flex justify-between text-on-surface-variant font-data-mono text-data-mono">
+<span>Threshold: 85.0%</span>
+<span>High Precision Index</span>
+</div>
+</div>
+<!-- Severity & Foliar Surface Impact -->
+<div class="grid grid-cols-2 gap-space-md pt-space-xs">
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-1">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Severity Index</span>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-error shrink-0"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Stage 2 of 4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Moderate concentric decay</p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-1">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Foliar Area Lost</span>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-error">pie_chart</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">18% Surface</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chlorotic margin expansion</p>
+</div>
+</div>
+<!-- Secondary Probabilities Breakdown -->
+<div class="space-y-space-sm pt-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Differential Classification Probabilities</span>
+<div class="space-y-space-xs">
+<!-- Late Blight -->
+<div class="flex items-center justify-between text-body-sm font-body-sm bg-surface p-space-xs rounded">
+<span class="text-on-surface">Late Blight (Phytophthora infestans)</span>
+<div class="flex items-center gap-space-sm">
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full" style="width: 3.8%;"></div>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface-variant w-10 text-right">3.8%</span>
+</div>
+</div>
+<!-- Septoria Leaf Spot -->
+<div class="flex items-center justify-between text-body-sm font-body-sm bg-surface p-space-xs rounded">
+<span class="text-on-surface">Septoria Leaf Spot (Septoria lycopersici)</span>
+<div class="flex items-center gap-space-sm">
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full" style="width: 1.1%;"></div>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface-variant w-10 text-right">1.1%</span>
+</div>
+</div>
+<!-- Healthy Foliage -->
+<div class="flex items-center justify-between text-body-sm font-body-sm bg-surface p-space-xs rounded">
+<span class="text-on-surface">Asymptomatic / Healthy Canopy</span>
+<div class="flex items-center gap-space-sm">
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full" style="width: 0.3%;"></div>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface-variant w-10 text-right">0.3%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Clinical Agronomic Action Plan -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">prescriptions</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Agronomic Action Plan</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Priority 1 Action</span>
+</div>
+<div class="space-y-space-md">
+<!-- Intervention 1: Immediate / Irrigation -->
+<div class="flex gap-space-md p-space-md rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Irrigation Containment</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">Immediate</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Isolate overhead irrigation pivot in Sector 2 to stop canopy wetting. Convert field schedule to root-level drip lines immediately to suppress spore transmission.</p>
+</div>
+</div>
+<!-- Intervention 2: Chemical/Organic Treatment -->
+<div class="flex gap-space-md p-space-md rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">sanitizer</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Targeted Foliar Spray</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Within 36 Hours</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Apply certified Copper Octanoate (organic) or Chlorothalonil 720 SC at 1.8 L/ha. Calibrate spray boom for dense under-canopy penetration.</p>
+</div>
+</div>
+<!-- Intervention 3: Cultural Sanitary Practice -->
+<div class="flex gap-space-md p-space-md rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">content_cut</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Canopy Sanitation</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Next Crew Cycle</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Prune and bag lower infected leaves up to 25cm above soil bed. Incinerate or dispose outside farm perimeter; sanitize shear blades between rows.</p>
+</div>
+</div>
+</div>
+<!-- Farm Log Confirmation & Dispatch CTA Buttons -->
+<div class="pt-space-sm flex flex-col sm:flex-row items-center gap-space-sm">
+<button class="w-full sm:flex-1 py-space-sm px-space-md bg-primary-container hover:bg-primary text-on-primary rounded-lg font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs transition-colors shadow-sm" id="btn-save-log" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save to Field Log</span>
+</button>
+<button class="w-full sm:flex-1 py-space-sm px-space-md bg-surface hover:bg-surface-container text-on-surface rounded-lg font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs transition-colors shadow-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Irrigation Planner</span>
+</button>
+<button class="p-space-sm bg-surface hover:bg-surface-container text-on-surface rounded-lg shadow-xs transition-colors" title="Export Full Diagnostic PDF" type="button">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initDiagnosticsUI() {
+    const toggleBtn = document.getElementById('toggle-bounding-box');
+    const bbox1 = document.getElementById('bbox-1');
+    const bbox2 = document.getElementById('bbox-2');
+    const saveBtn = document.getElementById('btn-save-log');
+
+    let isVisible = true;
+
+    if (toggleBtn && bbox1 && bbox2) {
+      toggleBtn.addEventListener('click', () => {
+        isVisible = !isVisible;
+        bbox1.style.display = isVisible ? 'block' : 'none';
+        bbox2.style.display = isVisible ? 'block' : 'none';
+        toggleBtn.classList.toggle('bg-primary-container', !isVisible);
+        toggleBtn.classList.toggle('text-on-primary', !isVisible);
+      });
+    }
+
+    if (saveBtn) {
+      saveBtn.addEventListener('click', () => {
+        const originalText = saveBtn.innerHTML;
+        saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span><span>Logged to Sector 2</span>';
+        saveBtn.classList.remove('bg-primary-container');
+        saveBtn.classList.add('bg-secondary');
+        setTimeout(() => {
+          saveBtn.innerHTML = originalText;
+          saveBtn.classList.remove('bg-secondary');
+          saveBtn.classList.add('bg-primary-container');
+        }, 3000);
+      });
+    }
+  })();
+</script></main></div></body></html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-bright":"#f8f9ff","on-tertiary-fixed":"#0b2006","surface-container-low":"#eff4ff","secondary-fixed":"#adf3b8","tertiary-fixed":"#cfebc1","on-primary":"#ffffff","surface-container":"#e6eeff","on-secondary-fixed":"#00210b","surface-tint":"#456555","outline-variant":"#c1c8c2","outline":"#727974","on-background":"#121c2a","on-primary-fixed":"#012114","on-tertiary-container":"#8ea882","on-primary-fixed-variant":"#2e4d3e","surface":"#f8f9ff","background":"#f8f9ff","on-tertiary-fixed-variant":"#364d2e","on-surface":"#121c2a","on-tertiary":"#ffffff","secondary":"#296b3c","inverse-surface":"#27313f","primary-container":"#1e3d2f","surface-container-lowest":"#ffffff","primary":"#06271a","on-error":"#ffffff","error":"#ba1a1a","on-secondary":"#ffffff","surface-container-highest":"#d9e3f6","inverse-primary":"#accebb","surface-variant":"#d9e3f6","inverse-on-surface":"#eaf1ff","secondary-fixed-dim":"#92d69d","tertiary-container":"#273d20","surface-dim":"#d0dbed","primary-fixed-dim":"#accebb","primary-fixed":"#c7ebd6","on-secondary-fixed-variant":"#0a5226","on-secondary-container":"#307142","secondary-container":"#adf3b8","surface-container-high":"#dee9fc","tertiary-fixed-dim":"#b3cea6","on-primary-container":"#86a895","on-error-container":"#93000a","tertiary":"#11270c","error-container":"#ffdad6","on-surface-variant":"#424844"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"0.75rem","space-xs":"0.25rem","space-2xl":"2.5rem","margin-sm":"1rem","margin-lg":"2rem","space-sm":"0.5rem","space-lg":"1.25rem","margin":"1.5rem","gutter-sm":"0.75rem","gutter":"1.25rem","space-xl":"1.75rem","gutter-lg":"1.5rem"},fontFamily:{"headline-lg":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"data-mono":["Inter"],"display-lg":["Inter"],"headline-sm":["Inter"],"headline-md":["Inter"],"label-sm":["Inter"],"display-lg-mobile":["Inter"],"body-sm":["Inter"],"body-md":["Inter"]},fontSize:{"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"500"}],"data-mono":["13px",{lineHeight:"18px",fontWeight:"500"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}],"display-lg-mobile":["26px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-screen w-60 bg-surface border-r border-outline-variant/40 z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline-variant/30"><img alt="AgroAI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WS9o9_h4OGsmHnX6NBzt9g6Z8N839pzzySGkYOcINXvi7ndiUQ7BiyelWkujiGyAXCAUtgTQpVuZdcbuX5L4vHJiSqI-XrO2Wl0j8dt8N13t9ztqOtbF55OPuG8Bd7NjXmQU6bOoWAnRpV-j8-g_xH6U72RHibMHPRcN8SXH2l3DZ_kMVVpAg3OWazB6fL9zqA0s5aqw1L2czQd18IK5VXJNV7bQ1bjpWP26-fBkx_pgAlH_iVtmfVF_0"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary leading-tight truncate">AgroAI</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Decision Support</span></div></div><div class="p-space-sm space-y-space-md"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Main</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#">Dashboard</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-farm" href="#">My Farm</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="fields" href="#">Fields</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="weather" href="#">Weather</a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">AI &amp; Analysis</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ai-analysis" href="#">AI Analysis</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="disease-detection" href="#">Disease Detection</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="irrigation-planner" href="#">Irrigation Planner</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="algorithms-and-theory" href="#">Algorithms &amp; Theory</a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Management</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="resources-and-sensors" href="#">Resources &amp; Sensors</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="history-and-logs" href="#">History &amp; Logs</a><a aria-current="page" class="flex items-center px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-semibold rounded-lg" data-path="settings" href="#">Settings</a></nav></div></div></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface"><div class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg bg-surface-container-lowest border border-outline-variant/40"><span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">FastAPI + Firebase (Healthy)</span></div></div></aside><div class="pl-60 flex flex-col min-h-screen"><header class="fixed top-0 left-60 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 z-40 px-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm min-w-0"><span class="material-symbols-outlined text-secondary text-[20px] shrink-0">eco</span><div class="flex items-center gap-space-xs truncate"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Green Valley Farm</span><span class="text-outline font-label-md text-label-md">•</span><span class="font-body-md text-body-md text-on-surface-variant truncate">Sector 4 — Salinas Valley, CA</span></div></div><div class="flex items-center gap-gutter-lg shrink-0"><div class="hidden xl:flex items-center gap-space-xs bg-surface px-space-md py-space-xs rounded-lg border border-outline-variant/30 text-on-surface-variant font-data-mono text-data-mono"><span class="material-symbols-outlined text-[18px] text-secondary">partly_cloudy_day</span><span>22°C Clear</span><span class="text-outline-variant">|</span><span>Humidity 58%</span><span class="text-outline-variant">|</span><span>Wind 9 km/h NW</span></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-error text-on-error rounded-full flex items-center justify-center font-label-sm text-label-sm font-semibold">2</span></button><div class="h-6 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtfGUWf3TBenBcYhZR2uRKuz84PeAkSSbZSIDAtsU9X-CDXdkPpfQN-udNW7R8tRXtnbmjcAKD0XtbSS1C-oqAy-O66WIILaCzECUYoU8TK9EEcTWO7pa7Gt7dua4k6Z2E9Ew5kum2E5jxuIYdrupJhI6lU647zszH5VDn4T36L58MEqXqtN9ROwgKRZuEvIFVlmq9t5SdNc_h7Kqs2UR7uwgY4_1-h7ikIz4jyAVY2erQH8wA-uqo"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Farm Operations Lead</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin-lg py-margin flex flex-col gap-space-xl max-w-[1600px] w-full mx-auto">
+<!-- Top Breadcrumb & Page Meta -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span>Enterprise Portal</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>System Administration</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary font-semibold">Settings</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Application &amp; Farm Settings</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Configure farm profile, sensor integrations, automated AI engine parameters, and user preferences.
+        </p>
+</div>
+<!-- Live Connectivity Badge -->
+<div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-sm rounded-xl shadow-sm self-start md:self-center">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">FastAPI + Firebase Connected</span>
+<span class="font-data-mono text-label-sm text-secondary">Latency 42ms • Node 04 Salinas</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px] ml-space-xs" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- Main Layout Grid: Settings Navigation Dock + Content Stream -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<!-- Left Nested Navigation -->
+<aside class="lg:col-span-3 sticky top-20 bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="px-space-md py-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+          Configuration Categories
+        </div>
+<nav class="flex flex-col space-y-1">
+<a class="flex items-center justify-between px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-headline-sm text-body-md transition-all shadow-sm" href="#farm-info">
+<span class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">agriculture</span>
+<span>Farm Information</span>
+</span>
+<span class="text-label-sm font-semibold px-1.5 py-0.5 rounded bg-secondary text-on-primary">Active</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" href="#ai-engine">
+<span class="material-symbols-outlined text-[20px] text-secondary">psychology</span>
+<span>AI &amp; Algorithm Preferences</span>
+</a>
+<a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" href="#data-firebase">
+<span class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">cloud_sync</span>
+<span>Data &amp; Firebase</span>
+</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" href="#notifications">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">notifications_active</span>
+<span>Notifications &amp; Alerts</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" href="#appearance">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">tune</span>
+<span>Display &amp; Agronomic Units</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" href="#user-profile">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">badge</span>
+<span>User Profile</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" href="#security">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">shield</span>
+<span>Security &amp; Team Roles</span>
+</a>
+</nav>
+<!-- Quick Summary Mini-Card -->
+<div class="mt-space-lg bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs text-on-surface">
+<div class="flex items-center gap-space-xs text-secondary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+<span>Audit Trail</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Last parameters commit by <strong class="text-on-surface">Sarah Jenkins</strong> on Today at 08:14 PST.
+          </p>
+</div>
+</aside>
+<!-- Main Form Sections Area -->
+<main class="lg:col-span-9 flex flex-col gap-space-xl">
+<!-- SECTION 1: Farm Information -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg" id="farm-info">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">potted_plant</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Farm Information</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Primary geographical boundaries, parcel classifications, and regional parameters.</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container px-2.5 py-1 rounded-full text-secondary font-semibold">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span> GIS Anchor Verified
+            </span>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg" onsubmit="event.preventDefault();">
+<!-- Farm Name -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface flex items-center justify-between">
+<span>Farm Name</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Enterprise ID: AG-841</span>
+</label>
+<div class="relative">
+<input class="w-full bg-surface h-9 px-3 rounded-lg text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="text" value="Green Valley Farm"/>
+</div>
+</div>
+<!-- Operational Headquarters -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Operational Headquarters</label>
+<input class="w-full bg-surface h-9 px-3 rounded-lg text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="text" value="Sector 4 — Salinas Valley, CA"/>
+</div>
+<!-- GPS Coordinates -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface flex items-center justify-between">
+<span>GPS Centroid Coordinates</span>
+<span class="font-data-mono text-label-sm text-secondary">WGS84 Datum</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface h-9 px-3 pr-10 rounded-lg text-on-surface font-data-mono text-data-mono focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="text" value="36.677° N, 121.655° W"/>
+<span class="material-symbols-outlined absolute right-2.5 text-on-surface-variant text-[18px]">satellite_alt</span>
+</div>
+</div>
+<!-- Total Acreage -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Total Managed Land Area</label>
+<input class="w-full bg-surface h-9 px-3 rounded-lg text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="text" value="420 Hectares / 1,038 Acres"/>
+</div>
+<!-- Soil Classification -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface flex items-center justify-between">
+<span>Default Soil Classification</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">USDA Soil Survey v2</span>
+</label>
+<select class="w-full bg-surface h-9 px-3 rounded-lg text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-sm">
+<option selected="">Salinas Silty Clay Loam (Fine-Silty, Mixed)</option>
+<option>Chualar Sandy Loam (Thermic Typic Argixerolls)</option>
+<option>Pacheco Silt Loam (Fluvaquentic Endoaquolls)</option>
+<option>Lockwood Shaly Loam</option>
+</select>
+</div>
+<!-- Growing Season -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Current Growing Season</label>
+<select class="w-full bg-surface h-9 px-3 rounded-lg text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-sm">
+<option selected="">Spring / Summer 2025 (Active Rotation)</option>
+<option>Fall Cover Crop 2025</option>
+<option>Winter Fallow 2025-2026</option>
+</select>
+</div>
+</form>
+<div class="flex items-center justify-between pt-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+              All 14 field parcels synchronize coordinate geometry dynamically
+            </span>
+<button class="h-9 px-space-lg rounded-lg bg-primary text-on-primary font-headline-sm text-body-md hover:bg-primary-container transition-all flex items-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Farm Details</span>
+</button>
+</div>
+</section>
+<!-- SECTION 2: AI Engine & Algorithm Preferences -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg" id="ai-engine">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">model_training</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">AI Engine &amp; Algorithm Preferences</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configure autonomous decision weights, mathematical transparency, and constraint solver thresholds.</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 bg-secondary-container text-on-secondary-container rounded-full font-label-sm text-label-sm font-semibold">
+                AC-3 Solver Active
+              </span>
+</div>
+</div>
+<!-- Algorithm Control Stack -->
+<div class="flex flex-col gap-space-md">
+<!-- Toggle 1: Irrigation Recommendations (CSP + AC-3) -->
+<div class="bg-surface p-space-md rounded-xl flex items-start justify-between gap-space-md">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Enable Automated Irrigation Recommendations (CSP + AC-3)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold">Deterministic</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Automatically formulate feasible valve actuation schedules when root-zone matric potential drops below targeted crop threshold using Arc Consistency Algorithm #3.
+                </p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Toggle 2: Mathematical Formulations -->
+<div class="bg-surface p-space-md rounded-xl flex items-start justify-between gap-space-md">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Show Algorithmic Transparency &amp; Mathematical Formulations</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Explainability</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Display constraint satisfaction networks, dual graph representations, Gini impurity indices, and pruned solution domains on high-level analytical dashboards.
+                </p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Toggle 3: Pathogen CNN Auto-Triaging -->
+<div class="bg-surface p-space-md rounded-xl flex items-start justify-between gap-space-md">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Pathogen Scan Auto-Triaging (CNN Inference)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Vision ML</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Route severe fungal infections (Downy Mildew, Fusarium, Botrytis) directly to on-duty farm scout mobile handhelds with automated micro-polygon GPS pins.
+                </p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Toggle 4: Electricity Tariff Avoidance -->
+<div class="bg-surface p-space-md rounded-xl flex items-start justify-between gap-space-md">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Electricity Tariff Avoidance Mode</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold">Cost Reduction</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Enforce mandatory 500kW well pump lockouts during peak utility billing periods ($0.38/kWh window between 16:00 and 21:00 PST) unless severe evapotranspiration override occurs.
+                </p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Slider: Minimum Diagnostic Confidence Threshold -->
+<div class="bg-surface p-space-md rounded-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Minimum Diagnostic Confidence Threshold</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Predictions below this cutoff generate a human inspection prompt instead of auto-executing recommendations.</p>
+</div>
+<span class="font-data-mono text-headline-sm text-secondary bg-surface-container px-3 py-1 rounded-lg" id="sliderValue">85.0%</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-data-mono">50.0%</span>
+<input class="w-full accent-[#296b3c] h-2 bg-surface-container-high rounded-lg cursor-pointer" id="confidenceSlider" max="99" min="50" oninput="document.getElementById('sliderValue').innerText = parseFloat(this.value).toFixed(1) + '%'" step="0.5" type="range" value="85"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-data-mono">99.0%</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Higher Recall (More false positives)</span>
+<span class="text-secondary font-semibold">Recommended Enterprise Baseline</span>
+<span>Higher Precision (Strict verification)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Data & Firebase System Status -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg" id="data-firebase">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">database</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Data &amp; Firebase System Status</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time edge telemetry bridge, cloud database sync, and protocol heartbeats.</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 font-data-mono text-label-sm bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Cluster Health 100%
+            </span>
+</div>
+<!-- Status Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Backend Metric -->
+<div class="bg-surface p-space-md rounded-xl flex flex-col justify-between gap-space-sm shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>BACKEND API</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">bolt</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">FastAPI v0.110</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Python 3.11 High Perf Engine</p>
+</div>
+<span class="font-data-mono text-label-sm text-secondary font-semibold">Active • 42ms response</span>
+</div>
+<!-- Database Metric -->
+<div class="bg-surface p-space-md rounded-xl flex flex-col justify-between gap-space-sm shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>DATABASE STATUS</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">cloud_done</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">GCP Firestore</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Firebase Auth Integrated</p>
+</div>
+<span class="font-data-mono text-label-sm text-secondary font-semibold">Synchronized</span>
+</div>
+<!-- Last Cloud Sync -->
+<div class="bg-surface p-space-md rounded-xl flex flex-col justify-between gap-space-sm shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>LAST CLOUD SYNC</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">sync</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">2 mins ago</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">420 field records updated</p>
+</div>
+<span class="font-data-mono text-label-sm text-on-surface-variant">Next in 02:48</span>
+</div>
+<!-- Telemetry Buffer -->
+<div class="bg-surface p-space-md rounded-xl flex flex-col justify-between gap-space-sm shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>TELEMETRY BUFFER</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">sensors</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">0 Dropped Pkts</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rolling past 24h cycle</p>
+</div>
+<span class="font-data-mono text-label-sm text-secondary font-semibold">1,842,090 telemetry pts</span>
+</div>
+</div>
+<!-- Firebase Operational Actions -->
+<div class="bg-surface p-space-md rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">troubleshoot</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Diagnostics &amp; System Bundle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Execute synthetic health pings across regional soil probes and satellite ingest pipes.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-highest text-on-surface font-headline-sm text-body-sm hover:bg-surface-container-high transition-colors flex items-center gap-1.5" id="testConnectionBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">network_check</span>
+<span>Test Firebase Connection</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface border border-outline-variant/40 font-headline-sm text-body-sm hover:bg-surface transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Download Diagnostic Bundle</span>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Notification Rules -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg" id="notifications">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">notifications_active</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Notification Rules</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Assign delivery protocols for urgent field alerts, hardware degradation, and agronomic digests.</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Twilio SMS Gateway &amp; SendGrid</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Alert 1 -->
+<div class="bg-surface p-space-md rounded-xl flex items-start justify-between gap-space-sm">
+<div class="flex gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error-container text-error flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">water_loss</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Critical Moisture Deficit SMS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant SMS dispatch to field leads when moisture drops below 18% VWC.</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Alert 2 -->
+<div class="bg-surface p-space-md rounded-xl flex items-start justify-between gap-space-sm">
+<div class="flex gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">coronavirus</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Pathogen Blight Email Alerts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Immediate high-resolution image and GIS heatmap sent upon confirmed detection.</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Alert 3 -->
+<div class="bg-surface p-space-md rounded-xl flex items-start justify-between gap-space-sm">
+<div class="flex gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">portable_wifi_off</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Hardware Sensor Offline Warnings</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Notify technicians when LoRaWAN node heartbeat is absent for &gt; 45 minutes.</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Alert 4 -->
+<div class="bg-surface p-space-md rounded-xl flex items-start justify-between gap-space-sm">
+<div class="flex gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">newspaper</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Daily Morning Agronomy Digest</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Consolidated 06:00 AM summary including vapor pressure deficit and evapotranspiration.</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- SECTION 5: Appearance & Agronomic Units -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg mb-margin-lg" id="appearance">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">palette</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Appearance &amp; Agronomic Units</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Display parameters tailored for direct sunlight readability on field tablets and desktop command screens.</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Standard Nordic Functionalism</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Theme Preference -->
+<div class="bg-surface p-space-md rounded-xl flex flex-col gap-space-sm shadow-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">wb_sunny</span>
+                Theme Mode
+              </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Recommended for high glare and outdoor sunlight operations.</p>
+<div class="flex flex-col gap-1.5 mt-auto pt-2">
+<label class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm cursor-pointer">
+<input checked="" class="accent-[#1e3d2f] w-4 h-4" name="theme-choice" type="radio" value="light"/>
+<span>Light Mode (Field Daylight)</span>
+</label>
+<label class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm cursor-pointer">
+<input class="accent-[#1e3d2f] w-4 h-4" name="theme-choice" type="radio" value="system"/>
+<span>System Default Sync</span>
+</label>
+</div>
+</div>
+<!-- Temperature Units -->
+<div class="bg-surface p-space-md rounded-xl flex flex-col gap-space-sm shadow-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">device_thermostat</span>
+                Temperature Unit
+              </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Applied across thermal sensors and weather forecast matrices.</p>
+<div class="flex flex-col gap-1.5 mt-auto pt-2">
+<label class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm cursor-pointer">
+<input checked="" class="accent-[#1e3d2f] w-4 h-4" name="temp-unit" type="radio" value="c"/>
+<span>Celsius (°C) — Scientific Standard</span>
+</label>
+<label class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm cursor-pointer">
+<input class="accent-[#1e3d2f] w-4 h-4" name="temp-unit" type="radio" value="f"/>
+<span>Fahrenheit (°F)</span>
+</label>
+</div>
+</div>
+<!-- Soil Moisture Units -->
+<div class="bg-surface p-space-md rounded-xl flex flex-col gap-space-sm shadow-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">opacity</span>
+                Moisture Metric
+              </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Primary format in irrigation planner schedules and telemetry badges.</p>
+<div class="flex flex-col gap-1.5 mt-auto pt-2">
+<label class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm cursor-pointer">
+<input checked="" class="accent-[#1e3d2f] w-4 h-4" name="moist-unit" type="radio" value="vwc"/>
+<span>Volumetric Water Content (VWC %)</span>
+</label>
+<label class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm cursor-pointer">
+<input class="accent-[#1e3d2f] w-4 h-4" name="moist-unit" type="radio" value="kpa"/>
+<span>Soil Matric Potential (kPa / cb)</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Final Action Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md border-t border-outline-variant/30">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+<span>Parameters automatically validated against USDA Agronomic standard profiles.</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-9 px-space-md rounded-lg text-on-surface-variant hover:text-on-surface font-headline-sm text-body-sm transition-colors" type="reset">
+                Discard Changes
+              </button>
+<button class="h-9 px-space-lg rounded-lg bg-primary text-on-primary font-headline-sm text-body-sm hover:bg-primary-container transition-all shadow-sm" type="button">
+                Apply System Preferences
+              </button>
+</div>
+</div>
+</section>
+</main>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const testBtn = document.getElementById('testConnectionBtn');
+    if (testBtn) {
+      testBtn.addEventListener('click', function() {
+        const originalText = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Pinging Firebase...</span>';
+        this.disabled = true;
+        setTimeout(() => {
+          this.innerHTML = '<span class="material-symbols-outlined text-[16px] text-secondary">check</span><span>Ping 38ms (Healthy)</span>';
+          setTimeout(() => {
+            this.innerHTML = originalText;
+            this.disabled = false;
+          }, 2400);
+        }, 900);
+      });
+    }
+  })();
+</script></main></div></body></html>

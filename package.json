@@ -1,0 +1,11 @@
+{
+  "name": "agroai-root",
+  "private": true,
+  "version": "1.0.0",
+  "description": "AgroAI — Intelligent Agricultural Decision Support System Root Launcher",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "start": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build"
+  }
+}

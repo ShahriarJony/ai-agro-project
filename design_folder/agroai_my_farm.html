@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-bright":"#f8f9ff","on-tertiary-fixed":"#0b2006","surface-container-low":"#eff4ff","secondary-fixed":"#adf3b8","tertiary-fixed":"#cfebc1","on-primary":"#ffffff","surface-container":"#e6eeff","on-secondary-fixed":"#00210b","surface-tint":"#456555","outline-variant":"#c1c8c2","outline":"#727974","on-background":"#121c2a","on-primary-fixed":"#012114","on-tertiary-container":"#8ea882","on-primary-fixed-variant":"#2e4d3e","surface":"#f8f9ff","background":"#f8f9ff","on-tertiary-fixed-variant":"#364d2e","on-surface":"#121c2a","on-tertiary":"#ffffff","secondary":"#296b3c","inverse-surface":"#27313f","primary-container":"#1e3d2f","surface-container-lowest":"#ffffff","primary":"#06271a","on-error":"#ffffff","error":"#ba1a1a","on-secondary":"#ffffff","surface-container-highest":"#d9e3f6","inverse-primary":"#accebb","surface-variant":"#d9e3f6","inverse-on-surface":"#eaf1ff","secondary-fixed-dim":"#92d69d","tertiary-container":"#273d20","surface-dim":"#d0dbed","primary-fixed-dim":"#accebb","primary-fixed":"#c7ebd6","on-secondary-fixed-variant":"#0a5226","on-secondary-container":"#307142","secondary-container":"#adf3b8","surface-container-high":"#dee9fc","tertiary-fixed-dim":"#b3cea6","on-primary-container":"#86a895","on-error-container":"#93000a","tertiary":"#11270c","error-container":"#ffdad6","on-surface-variant":"#424844"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"0.75rem","space-xs":"0.25rem","space-2xl":"2.5rem","margin-sm":"1rem","margin-lg":"2rem","space-sm":"0.5rem","space-lg":"1.25rem","margin":"1.5rem","gutter-sm":"0.75rem","gutter":"1.25rem","space-xl":"1.75rem","gutter-lg":"1.5rem"},fontFamily:{"headline-lg":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"data-mono":["Inter"],"display-lg":["Inter"],"headline-sm":["Inter"],"headline-md":["Inter"],"label-sm":["Inter"],"display-lg-mobile":["Inter"],"body-sm":["Inter"],"body-md":["Inter"]},fontSize:{"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"500"}],"data-mono":["13px",{lineHeight:"18px",fontWeight:"500"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}],"display-lg-mobile":["26px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-screen w-60 bg-surface border-r border-outline-variant/40 z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline-variant/30"><img alt="AgroAI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WS9o9_h4OGsmHnX6NBzt9g6Z8N839pzzySGkYOcINXvi7ndiUQ7BiyelWkujiGyAXCAUtgTQpVuZdcbuX5L4vHJiSqI-XrO2Wl0j8dt8N13t9ztqOtbF55OPuG8Bd7NjXmQU6bOoWAnRpV-j8-g_xH6U72RHibMHPRcN8SXH2l3DZ_kMVVpAg3OWazB6fL9zqA0s5aqw1L2czQd18IK5VXJNV7bQ1bjpWP26-fBkx_pgAlH_iVtmfVF_0"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary leading-tight truncate">AgroAI</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Decision Support</span></div></div><div class="p-space-sm space-y-space-md"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Main</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#">Dashboard</a><a aria-current="page" class="flex items-center px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-semibold rounded-lg" data-path="my-farm" href="#">My Farm</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="fields" href="#">Fields</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="weather" href="#">Weather</a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">AI &amp; Analysis</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ai-analysis" href="#">AI Analysis</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="disease-detection" href="#">Disease Detection</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="irrigation-planner" href="#">Irrigation Planner</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="algorithms-and-theory" href="#">Algorithms &amp; Theory</a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Management</div><nav class="flex flex-col space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="resources-and-sensors" href="#">Resources &amp; Sensors</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="history-and-logs" href="#">History &amp; Logs</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#">Settings</a></nav></div></div></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface"><div class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg bg-surface-container-lowest border border-outline-variant/40"><span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">FastAPI + Firebase (Healthy)</span></div></div></aside><div class="pl-60 flex flex-col min-h-screen"><header class="fixed top-0 left-60 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 z-40 px-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm min-w-0"><span class="material-symbols-outlined text-secondary text-[20px] shrink-0">eco</span><div class="flex items-center gap-space-xs truncate"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Green Valley Farm</span><span class="text-outline font-label-md text-label-md">•</span><span class="font-body-md text-body-md text-on-surface-variant truncate">Sector 4 — Salinas Valley, CA</span></div></div><div class="flex items-center gap-gutter-lg shrink-0"><div class="hidden xl:flex items-center gap-space-xs bg-surface px-space-md py-space-xs rounded-lg border border-outline-variant/30 text-on-surface-variant font-data-mono text-data-mono"><span class="material-symbols-outlined text-[18px] text-secondary">partly_cloudy_day</span><span>22°C Clear</span><span class="text-outline-variant">|</span><span>Humidity 58%</span><span class="text-outline-variant">|</span><span>Wind 9 km/h NW</span></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-error text-on-error rounded-full flex items-center justify-center font-label-sm text-label-sm font-semibold">2</span></button><div class="h-6 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtfGUWf3TBenBcYhZR2uRKuz84PeAkSSbZSIDAtsU9X-CDXdkPpfQN-udNW7R8tRXtnbmjcAKD0XtbSS1C-oqAy-O66WIILaCzECUYoU8TK9EEcTWO7pa7Gt7dua4k6Z2E9Ew5kum2E5jxuIYdrupJhI6lU647zszH5VDn4T36L58MEqXqtN9ROwgKRZuEvIFVlmq9t5SdNc_h7Kqs2UR7uwgY4_1-h7ikIz4jyAVY2erQH8wA-uqo"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Farm Operations Lead</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Content Canvas Container -->
+<div class="p-margin-lg space-y-gutter-lg max-w-[1600px] mx-auto w-full">
+<!-- Page Context & Action Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-xs">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+<span>Enterprise Core</span>
+<span class="text-outline">/</span>
+<span>Spatial Asset Registry</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight">My Farm</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage your operational farm boundaries, parcels, IoT telemetry networks, and real-time agronomic regimes.</p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-md h-9 bg-surface-container-lowest text-on-surface hover:bg-surface-container-low transition-colors rounded-lg shadow-sm font-label-md text-label-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Export Overview</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md h-9 bg-primary-container text-on-primary hover:bg-primary transition-colors rounded-lg shadow-sm font-label-md text-label-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>+ Add Field</span>
+</button>
+</div>
+</div>
+<!-- Farm Master Dossier: Bento Cluster -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter">
+<!-- Agricultural Metadata Dossier Card -->
+<div class="xl:col-span-8 bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between overflow-hidden">
+<div class="p-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-md mb-space-md bg-surface-container-low/40 -mx-space-lg -mt-space-lg px-space-lg pt-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="p-space-xs bg-primary text-on-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">agriculture</span>
+</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Green Valley Farm — Sector 4</h2>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Regional Grid: 36.677° N, 121.655° W • Salinas Valley, CA</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-space-xs rounded-lg shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Operational Mode</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter-sm">
+<div class="p-space-sm bg-surface-bright rounded-lg space-y-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Total Area</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-primary tracking-tight">420.0</span>
+<span class="font-data-mono text-data-mono text-secondary font-semibold">Hectares</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline block">100% Surveyed</span>
+</div>
+<div class="p-space-sm bg-surface-bright rounded-lg space-y-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Monitored Parcels</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-primary tracking-tight">8</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Units</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary block">All Active</span>
+</div>
+<div class="p-space-sm bg-surface-bright rounded-lg space-y-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Cycle Phase</span>
+<div class="font-headline-sm text-headline-sm text-primary tracking-tight pt-1">Spring / Early Summer</div>
+<span class="font-body-sm text-body-sm text-outline block">Day 44 of Cycle</span>
+</div>
+<div class="p-space-sm bg-surface-bright rounded-lg space-y-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Edge Ingestion</span>
+<div class="flex items-center gap-space-xs pt-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">sync</span>
+<span class="font-data-mono text-data-mono text-on-surface font-semibold">14m ago</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary block">FastAPI Engine v2.4</span>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container-low rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary-container text-[20px] shrink-0">grass</span>
+<div class="truncate">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Active Crop Varietals in Production</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Sweet Corn (Zea mays), Hard Red Wheat, Soybeans, Roma Tomatoes, Malting Barley</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest text-primary px-space-sm py-space-xs rounded font-semibold whitespace-nowrap self-start md:self-auto">5 Cultivars Registered</span>
+</div>
+</div>
+<div class="px-space-lg py-space-sm bg-surface-container-low/60 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Cadastral ID: US-CA-MON-44029-SEC4</span>
+<span class="font-data-mono text-data-mono">Agronomic Health Index: 94.2 / 100</span>
+</div>
+</div>
+<!-- Infrastructure Quick Telemetry Hub -->
+<div class="xl:col-span-4 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">sensors</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Telemetry &amp; Infrastructure</h3>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/40 px-space-xs py-0.5 rounded font-semibold">Live Feed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Real-time status of surface hydraulic infrastructure and IoT capacitance sensors.</p>
+<div class="space-y-space-md">
+<!-- Soil Sensor Status -->
+<div class="p-space-sm bg-surface-bright rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">nest_multi_room</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Soil Matrix Probes</span>
+<span class="font-body-sm text-body-sm text-secondary">24 of 24 Connected</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-data-mono text-label-sm font-semibold">100% ONLINE</span>
+</div>
+<!-- Water Reservoir Status -->
+<div class="p-space-sm bg-surface-bright rounded-lg space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">water_drop</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Primary Deep Reservoir</span>
+</div>
+<span class="font-data-mono text-data-mono text-primary font-semibold">64,200 L <span class="text-on-surface-variant font-normal">/ 82,000 L</span></span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 78%;"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-body-sm text-body-sm">
+<span>Current Capacity: 78%</span>
+<span class="text-secondary font-medium">Head Pressure Nominal</span>
+</div>
+</div>
+<!-- Irrigation Pumps -->
+<div class="p-space-sm bg-surface-bright rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">cyclone</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Hydraulic Variable Pumps</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">P1 (Corn) • P2 (Tomatoes)</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary">2 / 3</span>
+<span class="block font-label-sm text-label-sm text-secondary font-medium">P3 In Standby</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm bg-surface-container-lowest flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Aux Solar Battery Bank</span>
+<span class="font-data-mono text-data-mono text-on-surface font-semibold">96% (48.2 V)</span>
+</div>
+</div>
+</div>
+<!-- Spatial Layout & Infrastructure Map Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Section Top Bar -->
+<div class="p-space-lg pb-space-sm flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">map</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Farm Spatial Layout &amp; Infrastructure Map</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live coordinate mapping with autonomous implement routing, telemetry cluster anchors, and irrigation manifolds.</p>
+</div>
+<!-- Visual Legend -->
+<div class="flex flex-wrap items-center gap-space-md bg-surface-container-low px-space-md py-space-xs rounded-lg">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface">
+<span class="w-3 h-3 rounded bg-secondary-fixed-dim"></span>
+<span>Parcels (8)</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface">
+<span class="w-3 h-1 bg-surface-tint"></span>
+<span>Irrigation Canals</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span>Central Reservoir</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-error">precision_manufacturing</span>
+<span>T-1 Tractor Route</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>IoT Sensors</span>
+</div>
+</div>
+</div>
+<!-- High Precision SVG Agronomic Map Canvas -->
+<div class="px-space-lg py-space-md">
+<div class="relative w-full bg-surface-bright rounded-xl overflow-hidden shadow-inner">
+<svg class="w-full h-auto select-none" viewbox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg">
+<!-- Background Map Grid Pattern -->
+<defs>
+<pattern height="40" id="cadastralGrid" patternunits="userSpaceOnUse" width="40">
+<path class="text-surface-container-highest/60" d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.8"></path>
+</pattern>
+<pattern height="12" id="cropRows" patternunits="userSpaceOnUse" width="12">
+<line class="text-secondary/10" stroke="currentColor" stroke-width="1.2" x1="0" x2="12" y1="6" y2="6"></line>
+</pattern>
+</defs>
+<rect fill="#F8F9FF" height="520" width="1000"></rect>
+<rect fill="url(#cadastralGrid)" height="520" width="1000"></rect>
+<!-- Perimeter Boundary Fence -->
+<polygon class="text-outline-variant" fill="none" points="40,30 960,30 960,490 40,490" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></polygon>
+<!-- Access Roads (Double Haul Roads) -->
+<!-- North-South Spine Road -->
+<rect class="text-surface-container" fill="currentColor" height="460" width="36" x="480" y="30"></rect>
+<line class="text-surface-container-lowest" stroke="currentColor" stroke-dasharray="8 6" stroke-width="1.5" x1="498" x2="498" y1="30" y2="490"></line>
+<!-- East-West Arterial Road -->
+<rect class="text-surface-container" fill="currentColor" height="28" width="920" x="40" y="240"></rect>
+<line class="text-surface-container-lowest" stroke="currentColor" stroke-dasharray="8 6" stroke-width="1.5" x1="40" x2="960" y1="254" y2="254"></line>
+<!-- Canal Network (Blue/Teal water veins) -->
+<path class="text-surface-tint" d="M 60 70 L 460 70 L 460 220" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4"></path>
+<path class="text-surface-tint" d="M 536 70 L 930 70 L 930 220" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4"></path>
+<path class="text-surface-tint" d="M 60 450 L 460 450 L 460 288" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4"></path>
+<path class="text-surface-tint" d="M 536 450 L 930 450 L 930 288" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4"></path>
+<!-- PARCEL A: CORN (Upper Left) -->
+<g class="cursor-pointer group">
+<rect class="text-secondary-fixed/40 transition-colors group-hover:text-secondary-fixed/60" fill="currentColor" height="170" rx="6" stroke="currentColor" stroke-dasharray="none" stroke-width="1.5" width="400" x="60" y="50"></rect>
+<rect fill="url(#cropRows)" height="170" rx="6" width="400" x="60" y="50"></rect>
+<!-- Badge/Label -->
+<rect class="text-surface-container-lowest shadow-sm" fill="currentColor" height="26" rx="4" width="130" x="74" y="64"></rect>
+<text class="fill-primary tracking-wide" font-family="Inter" font-size="11" font-weight="600" x="82" y="81">FIELD A • CORN</text>
+<rect class="text-secondary-container" fill="currentColor" height="26" rx="4" width="60" x="210" y="64"></rect>
+<text class="fill-secondary" font-family="Inter" font-size="11" font-weight="600" x="218" y="81">68% M</text>
+<text class="fill-on-surface" font-family="Inter" font-size="13" font-weight="600" x="74" y="112">110.0 Hectares</text>
+<text class="fill-on-surface-variant" font-family="Inter" font-size="10" font-weight="400" x="74" y="128">Irrigation Active: Valve IV-01</text>
+<!-- Sensors in Parcel A -->
+<circle class="text-secondary" cx="120" cy="170" fill="currentColor" r="5"></circle>
+<circle class="text-secondary/40" cx="120" cy="170" fill="none" r="10" stroke="currentColor" stroke-width="1"></circle>
+<circle class="text-secondary" cx="320" cy="150" fill="currentColor" r="5"></circle>
+<circle class="text-secondary/40" cx="320" cy="150" fill="none" r="10" stroke="currentColor" stroke-width="1"></circle>
+</g>
+<!-- PARCEL B-2: HARD RED WHEAT (Upper Right) -->
+<g class="cursor-pointer group">
+<rect class="text-tertiary-fixed/30 transition-colors group-hover:text-tertiary-fixed/50" fill="currentColor" height="170" rx="6" width="404" x="536" y="50"></rect>
+<rect fill="url(#cropRows)" height="170" rx="6" width="404" x="536" y="50"></rect>
+<rect class="text-surface-container-lowest shadow-sm" fill="currentColor" height="26" rx="4" width="146" x="550" y="64"></rect>
+<text class="fill-primary tracking-wide" font-family="Inter" font-size="11" font-weight="600" x="558" y="81">FIELD B-2 • WHEAT</text>
+<rect class="text-surface-container-high" fill="currentColor" height="26" rx="4" width="60" x="702" y="64"></rect>
+<text class="fill-on-surface-variant" font-family="Inter" font-size="11" font-weight="600" x="710" y="81">42% M</text>
+<text class="fill-on-surface" font-family="Inter" font-size="13" font-weight="600" x="550" y="112">95.0 Hectares</text>
+<text class="fill-on-surface-variant" font-family="Inter" font-size="10" font-weight="400" x="550" y="128">Advisory: Schedule cycle in 24h</text>
+<!-- Sensors in Parcel B-2 -->
+<circle class="text-secondary" cx="620" cy="160" fill="currentColor" r="5"></circle>
+<circle class="text-secondary" cx="820" cy="140" fill="currentColor" r="5"></circle>
+</g>
+<!-- PARCEL C-4: SOYBEANS (Lower Left) -->
+<g class="cursor-pointer group">
+<rect class="text-secondary-fixed/40 transition-colors group-hover:text-secondary-fixed/60" fill="currentColor" height="180" rx="6" width="400" x="60" y="288"></rect>
+<rect fill="url(#cropRows)" height="180" rx="6" width="400" x="60" y="288"></rect>
+<rect class="text-surface-container-lowest shadow-sm" fill="currentColor" height="26" rx="4" width="155" x="74" y="302"></rect>
+<text class="fill-primary tracking-wide" font-family="Inter" font-size="11" font-weight="600" x="82" y="319">FIELD C-4 • SOYBEANS</text>
+<rect class="text-secondary-container" fill="currentColor" height="26" rx="4" width="60" x="235" y="302"></rect>
+<text class="fill-secondary" font-family="Inter" font-size="11" font-weight="600" x="243" y="319">79% M</text>
+<text class="fill-on-surface" font-family="Inter" font-size="13" font-weight="600" x="74" y="350">85.0 Hectares</text>
+<text class="fill-on-surface-variant" font-family="Inter" font-size="10" font-weight="400" x="74" y="366">Optimal Soil Salinity &amp; pH</text>
+<!-- Sensors in C-4 -->
+<circle class="text-secondary" cx="150" cy="410" fill="currentColor" r="5"></circle>
+<circle class="text-secondary" cx="360" cy="400" fill="currentColor" r="5"></circle>
+</g>
+<!-- PARCEL D: TOMATOES & PARCEL E: BARLEY (Lower Right Split) -->
+<g class="cursor-pointer group">
+<!-- Parcel D -->
+<rect class="text-error-container/40 transition-colors group-hover:text-error-container/60" fill="currentColor" height="180" rx="6" width="220" x="536" y="288"></rect>
+<rect fill="url(#cropRows)" height="180" rx="6" width="220" x="536" y="288"></rect>
+<rect class="text-surface-container-lowest shadow-sm" fill="currentColor" height="26" rx="4" width="138" x="548" y="302"></rect>
+<text class="fill-error tracking-wide" font-family="Inter" font-size="11" font-weight="600" x="554" y="319">FIELD D • TOMATO</text>
+<rect class="text-error-container" fill="currentColor" height="20" rx="3" width="88" x="548" y="334"></rect>
+<text class="fill-error" font-family="Inter" font-size="9.5" font-weight="700" x="554" y="348">BLIGHT RISK</text>
+<text class="fill-on-surface" font-family="Inter" font-size="12" font-weight="600" x="548" y="378">75.0 Ha</text>
+<!-- Sensor in D -->
+<circle class="text-error" cx="640" cy="420" fill="currentColor" r="5"></circle>
+<circle class="text-error/40" cx="640" cy="420" fill="none" r="10" stroke="currentColor" stroke-width="1"></circle>
+</g>
+<!-- Parcel E: Malting Barley -->
+<g class="cursor-pointer group">
+<rect class="text-secondary-fixed/30 transition-colors group-hover:text-secondary-fixed/50" fill="currentColor" height="180" rx="6" width="172" x="768" y="288"></rect>
+<rect fill="url(#cropRows)" height="180" rx="6" width="172" x="768" y="288"></rect>
+<rect class="text-surface-container-lowest shadow-sm" fill="currentColor" height="26" rx="4" width="130" x="778" y="302"></rect>
+<text class="fill-primary tracking-wide" font-family="Inter" font-size="11" font-weight="600" x="784" y="319">FIELD E • BARLEY</text>
+<text class="fill-on-surface" font-family="Inter" font-size="12" font-weight="600" x="778" y="350">55.0 Ha</text>
+<text class="fill-on-surface-variant" font-family="Inter" font-size="10" font-weight="400" x="778" y="366">58% Moisture</text>
+<circle class="text-secondary" cx="850" cy="410" fill="currentColor" r="5"></circle>
+</g>
+<!-- CENTRAL INFRASTRUCTURE PLAZA -->
+<g>
+<!-- Central Water Reservoir Hub -->
+<rect class="text-surface-container-lowest shadow-md" fill="currentColor" height="64" rx="8" width="64" x="466" y="222"></rect>
+<circle class="text-primary-container" cx="498" cy="254" fill="currentColor" r="22"></circle>
+<circle class="text-surface-container-lowest" cx="498" cy="254" fill="currentColor" r="14"></circle>
+<circle class="text-secondary" cx="498" cy="254" fill="currentColor" r="9"></circle>
+<text class="fill-primary uppercase tracking-wider" font-family="Inter" font-size="9" font-weight="700" text-anchor="middle" x="498" y="298">TANK RES-1</text>
+</g>
+<!-- Hydraulic Pumps (P1, P2, P3) -->
+<g transform="translate(440, 214)">
+<circle class="text-secondary" cx="8" cy="8" fill="currentColor" r="7"></circle>
+<text fill="#FFFFFF" font-family="Inter" font-size="8" font-weight="700" text-anchor="middle" x="8" y="11">P1</text>
+</g>
+<g transform="translate(542, 214)">
+<circle class="text-secondary" cx="8" cy="8" fill="currentColor" r="7"></circle>
+<text fill="#FFFFFF" font-family="Inter" font-size="8" font-weight="700" text-anchor="middle" x="8" y="11">P2</text>
+</g>
+<g transform="translate(490, 304)">
+<circle class="text-outline" cx="8" cy="8" fill="currentColor" r="7"></circle>
+<text fill="#FFFFFF" font-family="Inter" font-size="8" font-weight="700" text-anchor="middle" x="8" y="11">P3</text>
+</g>
+<!-- John Deere Autonomous Tractor T-1 Route Waypoints -->
+<path class="text-error" d="M 680 70 L 680 180 L 880 180 L 880 100" fill="none" stroke="currentColor" stroke-dasharray="4 3" stroke-width="1.8"></path>
+<!-- Tractor Icon Position Marker -->
+<g transform="translate(872, 92)">
+<rect class="text-error shadow-sm" fill="currentColor" height="18" rx="4" width="18" x="0" y="0"></rect>
+<circle cx="9" cy="9" fill="#FFFFFF" r="4"></circle>
+</g>
+<text class="fill-error" font-family="Inter" font-size="9" font-weight="600" x="896" y="105">T-1 Harrowing</text>
+<!-- Scale & North Indicator -->
+<g transform="translate(900, 470)">
+<path class="text-on-surface" d="M 0 0 L 30 0" stroke="currentColor" stroke-width="2"></path>
+<path class="text-on-surface" d="M 0 -3 L 0 3" stroke="currentColor" stroke-width="1.5"></path>
+<path class="text-on-surface" d="M 30 -3 L 30 3" stroke="currentColor" stroke-width="1.5"></path>
+<text class="fill-on-surface" font-family="Inter" font-size="8" font-weight="600" text-anchor="middle" x="15" y="-6">500 M</text>
+</g>
+<g transform="translate(80, 484)">
+<text class="fill-on-surface-variant font-data-mono" font-family="Inter" font-size="9" font-weight="500" x="0" y="0">Projection: WGS84 UTM Zone 10N</text>
+</g>
+</svg>
+</div>
+</div>
+<div class="px-space-lg py-space-sm bg-surface-container-low/50 flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+          Cadastral shapefiles validated against Monterey County Agricultural Assessor records
+        </span>
+<button class="text-primary hover:text-secondary font-semibold transition-colors inline-flex items-center gap-1" type="button">
+<span>Configure Drone Patrol Boundary</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Field Operational Inventory Table & Activity Feed Mosaic -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Field Parcels Overview Table -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div>
+<!-- Header -->
+<div class="p-space-lg pb-space-md flex items-center justify-between">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">view_list</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Parcel Performance &amp; Soil Profiles</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Detailed sensor telemetry, pedological readings, and immediate irrigation actions.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-bright text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-lg font-semibold">Field ID &amp; Crop</th>
+<th class="py-space-sm px-space-md font-semibold">Moisture Index</th>
+<th class="py-space-sm px-space-md font-semibold text-center">Soil pH</th>
+<th class="py-space-sm px-space-md font-semibold">Agronomic Status</th>
+<th class="py-space-sm px-space-md font-semibold">Hydration Demand</th>
+<th class="py-space-sm px-space-lg font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm">
+<!-- Row 1: Field A -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Field A</span>
+<span class="text-on-surface-variant font-data-mono text-label-sm">Sweet Corn • 110.0 Ha</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="w-36 space-y-1">
+<div class="flex justify-between items-center text-label-sm font-data-mono">
+<span class="font-semibold text-on-surface">68%</span>
+<span class="text-secondary">Optimal</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 68%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-data-mono text-data-mono text-on-surface px-space-xs py-0.5 bg-surface-container-low rounded font-medium">6.4</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      Healthy
+                    </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm text-secondary font-medium">Low (Cycle Run)</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="px-space-sm py-1 bg-surface-container-low hover:bg-surface-container text-primary rounded font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                      View Diagnostics
+                    </button>
+</td>
+</tr>
+<!-- Row 2: Field B-2 -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Field B-2</span>
+<span class="text-on-surface-variant font-data-mono text-label-sm">Hard Red Wheat • 95.0 Ha</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="w-36 space-y-1">
+<div class="flex justify-between items-center text-label-sm font-data-mono">
+<span class="font-semibold text-on-surface">42%</span>
+<span class="text-on-surface-variant">Declining</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-data-mono text-data-mono text-on-surface px-space-xs py-0.5 bg-surface-container-low rounded font-medium">6.8</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                      Needs Care
+                    </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Moderate</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="px-space-sm py-1 bg-surface-container-low hover:bg-surface-container text-primary rounded font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                      View Diagnostics
+                    </button>
+</td>
+</tr>
+<!-- Row 3: Field C-4 -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Field C-4</span>
+<span class="text-on-surface-variant font-data-mono text-label-sm">Soybeans • 85.0 Ha</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="w-36 space-y-1">
+<div class="flex justify-between items-center text-label-sm font-data-mono">
+<span class="font-semibold text-on-surface">79%</span>
+<span class="text-secondary">Saturated</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 79%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-data-mono text-data-mono text-on-surface px-space-xs py-0.5 bg-surface-container-low rounded font-medium">6.1</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      Healthy
+                    </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm text-outline font-medium">Suspended</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="px-space-sm py-1 bg-surface-container-low hover:bg-surface-container text-primary rounded font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                      View Diagnostics
+                    </button>
+</td>
+</tr>
+<!-- Row 4: Field D -->
+<tr class="hover:bg-surface-bright transition-colors bg-error-container/10">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-error font-semibold flex items-center gap-1">
+                        Field D
+                        <span class="material-symbols-outlined text-[14px]">warning</span>
+</span>
+<span class="text-on-surface-variant font-data-mono text-label-sm">Roma Tomatoes • 75.0 Ha</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="w-36 space-y-1">
+<div class="flex justify-between items-center text-label-sm font-data-mono">
+<span class="font-semibold text-on-surface">61%</span>
+<span class="text-secondary">Normal</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 61%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-data-mono text-data-mono text-on-surface px-space-xs py-0.5 bg-surface-container-low rounded font-medium">6.5</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                      Critical - Blight Risk
+                    </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm text-error font-semibold">Scheduled</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="px-space-sm py-1 bg-error text-on-error hover:bg-error/90 rounded font-label-sm text-label-sm font-semibold transition-colors shadow-sm" type="button">
+                      View Diagnostics
+                    </button>
+</td>
+</tr>
+<!-- Row 5: Field E -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Field E</span>
+<span class="text-on-surface-variant font-data-mono text-label-sm">Malting Barley • 55.0 Ha</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="w-36 space-y-1">
+<div class="flex justify-between items-center text-label-sm font-data-mono">
+<span class="font-semibold text-on-surface">58%</span>
+<span class="text-secondary">Normal</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 58%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-data-mono text-data-mono text-on-surface px-space-xs py-0.5 bg-surface-container-low rounded font-medium">6.6</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      Healthy
+                    </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Low</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="px-space-sm py-1 bg-surface-container-low hover:bg-surface-container text-primary rounded font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                      View Diagnostics
+                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="p-space-md bg-surface-bright flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Showing 5 of 8 active registered parcels</span>
+<div class="flex items-center gap-1">
+<button class="px-space-sm py-1 bg-surface-container-lowest rounded text-on-surface font-semibold shadow-sm" type="button">1</button>
+<button class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface" type="button">2</button>
+</div>
+</div>
+</div>
+<!-- Recent Farm Activity Feed -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">history_toggle_off</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recent Farm Activity</h3>
+</div>
+<span class="font-data-mono text-label-sm text-on-surface-variant">Live Audit</span>
+</div>
+<!-- Timeline Items -->
+<div class="space-y-space-lg relative before:absolute before:left-3 before:top-2 before:bottom-2 before:w-[2px] before:bg-surface-container">
+<!-- Event 1 -->
+<div class="relative pl-8">
+<div class="absolute left-1.5 top-1 w-3.5 h-3.5 rounded-full bg-secondary ring-4 ring-surface-container-lowest"></div>
+<div class="space-y-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">10:35 AM</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-data-mono">HYDRAULIC</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">Irrigation Cycle Completed</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pump P1 delivered 1,350 L to Field A (Corn). AC-3 microclimate constraint verified.</p>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="relative pl-8">
+<div class="absolute left-1.5 top-1 w-3.5 h-3.5 rounded-full bg-error ring-4 ring-surface-container-lowest"></div>
+<div class="space-y-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error font-semibold">08:30 AM</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-data-mono">DIAGNOSTIC</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">Pathology Scan Flagged</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">CNN Model identified Early Blight (Alternaria solani) in Field D Tomato cluster.</p>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="relative pl-8">
+<div class="absolute left-1.5 top-1 w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-surface-container-lowest"></div>
+<div class="space-y-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">06:15 AM</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-data-mono">TELEMETRY</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">IoT Capacitance Update</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">6 field probes synchronized soil matrix suction (-32 kPa across Root Layer B).</p>
+</div>
+</div>
+<!-- Event 4 -->
+<div class="relative pl-8">
+<div class="absolute left-1.5 top-1 w-3.5 h-3.5 rounded-full bg-outline ring-4 ring-surface-container-lowest"></div>
+<div class="space-y-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Yesterday, 17:40 PM</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-data-mono">AGRONOMY</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">Decision Tree Recommendation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Suspended foliar spray for Field C-4 due to 18 km/h wind velocity exceeding dispersion threshold.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-lowest">
+<button class="w-full py-space-xs text-center font-label-md text-label-md text-primary font-semibold hover:bg-surface-bright rounded-lg transition-colors flex items-center justify-center gap-1" type="button">
+<span>View Complete Audit Ledger</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Visual Ground Condition Field Capture Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Capture 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="h-44 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Expansive overhead drone imagery of healthy rows of young sweet corn on Salinas Valley farm under soft diffused morning daylight with deep green foliage and rich brown loamy soil." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpmELQDUQ1xtLtL56RE1ZQCE5Ev57rC7BJyridUvv8XxvU3B4cPAcI2RAKV9JrVaB5vK1ik62QMGoKJ3sG7xLH3CePc0YEFGSEnz4jmXhaxF0T3AUHobMwn9sPdjJAGDJHvIwP3CWvEBJRISN7ayw-XprJGipBRXwDfrCNITF8jeQyEfpwJeLh3EQGAmG7hAmoyhg5aQT39tr1gAhsB6yL93gC2VjbP4OsdB8MWF1pGFCk-kU32FYY"/>
+<span class="absolute bottom-2 left-2 bg-primary/90 text-on-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded shadow">Field A • Drone Scan #142</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between space-y-space-xs">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Canopy Closure: 74%</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Corn vegetative index trending 3.8% ahead of 5-year historic benchmark.</p>
+</div>
+<span class="font-data-mono text-label-sm text-secondary">Verified by Multispectral Sentinel-2</span>
+</div>
+</div>
+<!-- Capture 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="h-44 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of precision drip irrigation manifold pipe and moisture probe installed in modern tomato field bed with moist soil and green leaves." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFN-Td5d9PTd3j3U9kSyvvlbft-VHL8_BrN191Kv6b0H4XsmVFbT0G86uX9vkc0aNoO7Y4Ys_BkQSlZTNChY5LPP0HhsHd_zKl91kp7v-GWChx5y4QRQ80_uf72mP3nnLMAt9VQq5r0LSBowmIWFUc5jjFoCBEmDtL4w4XSN8JSVtM6jzvFVbo_lTsIPEQq1xDsHb1Oh1k3O-kaQAchBHwtXCoqeJMHUN5BPjwQ72Ke5VYppHdFTAZ"/>
+<span class="absolute bottom-2 left-2 bg-primary/90 text-on-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded shadow">Field D • Manifold M-04</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between space-y-space-xs">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Targeted Micro-Drip Active</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">System delivering anti-fungal copper treatment dissolved in low-rate feed.</p>
+</div>
+<span class="font-data-mono text-label-sm text-error">Intervention Stage: 40% Complete</span>
+</div>
+</div>
+<!-- Capture 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="h-44 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Autonomous agricultural green tractor working in golden wheat parcel under clear sunny sky with precision GPS telemetry mast visible on cabin." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAayTNXxzRv5stSzP3FaFnn_gf1e4XS7um2CMfqmOc3umpH48Bl0890utgOo-VRK1hToFnoo4CcZaoPLmx5EZYmfbX3OFxL6Ju0poOGkozmZv_gyQTx0fQi9tnv01LgpZJAPZUNrLwCPt6d5ijf4x8xpLLcQelUn6_zKWOOMWdyJJvXuql4uotASHXoUJETLMnk2HGCelk-THLMBSaY6mf3VwlLiVJRIHFrp41dPsnrpZ3bsu2KiDrt"/>
+<span class="absolute bottom-2 left-2 bg-primary/90 text-on-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded shadow">Implement Fleet • Tractor T-1</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between space-y-space-xs">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Autonomous Till &amp; Harrow</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Guidance path accuracy ±1.5 cm via RTK differential base station.</p>
+</div>
+<span class="font-data-mono text-label-sm text-secondary">Fuel Status: 84% • Speed: 8.2 km/h</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

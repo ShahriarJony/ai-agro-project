@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_dashboard" name="shell-type">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "outline": "#727974", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#0b2006", "on-primary-fixed": "#012114", "on-primary-fixed-variant": "#2e4d3e", "primary-fixed": "#c7ebd6", "secondary-fixed": "#adf3b8", "outline-variant": "#c1c8c2", "secondary-fixed-dim": "#92d69d", "on-secondary": "#ffffff", "surface-dim": "#d0dbed", "on-secondary-container": "#307142", "on-secondary-fixed": "#00210b", "background": "#f8f9ff", "tertiary-fixed-dim": "#b3cea6", "primary-container": "#1e3d2f", "error-container": "#ffdad6", "secondary-container": "#adf3b8", "surface-bright": "#f8f9ff", "surface": "#f8f9ff", "error": "#ba1a1a", "secondary": "#296b3c", "on-primary": "#ffffff", "on-surface": "#121c2a", "tertiary-container": "#273d20", "on-error": "#ffffff", "surface-container-high": "#dee9fc", "on-surface-variant": "#424844", "surface-container-highest": "#d9e3f6", "primary": "#06271a", "surface-container-low": "#eff4ff", "inverse-surface": "#27313f", "inverse-primary": "#accebb", "on-error-container": "#93000a", "primary-fixed-dim": "#accebb", "on-primary-container": "#86a895", "on-secondary-fixed-variant": "#0a5226", "tertiary-fixed": "#cfebc1", "surface-variant": "#d9e3f6", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#364d2e", "surface-tint": "#456555", "on-background": "#121c2a", "surface-container": "#e6eeff", "tertiary": "#11270c", "inverse-on-surface": "#eaf1ff", "on-tertiary-container": "#8ea882" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "margin-sm": "1rem", "gutter": "1.25rem", "space-lg": "1.25rem", "gutter-lg": "1.5rem", "space-xl": "1.75rem", "space-2xl": "2.5rem", "space-sm": "0.5rem", "space-md": "0.75rem", "gutter-sm": "0.75rem", "space-xs": "0.25rem", "margin-lg": "2rem", "margin": "1.5rem" }, fontFamily: { "headline-md": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"], "display-lg-mobile": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "data-mono": ["Inter"], "headline-lg": ["Inter"], "display-lg": ["Inter"], "body-sm": ["Inter"] }, fontSize: { "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-lg": ["15px", { lineHeight: "24px", fontWeight: "400" }], "headline-sm": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600" }], "display-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "500" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "600" }], "data-mono": ["13px", { lineHeight: "18px", fontWeight: "500" }], "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600" }], "display-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }] } } } }</script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface">
+  <aside
+    class="fixed left-0 top-0 h-screen w-60 bg-surface border-r border-outline-variant/40 z-50 flex flex-col justify-between overflow-y-auto">
+    <div class="flex flex-col">
+      <div class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline-variant/30"><img
+          alt="AgroAI Logo" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1WS9o9_h4OGsmHnX6NBzt9g6Z8N839pzzySGkYOcINXvi7ndiUQ7BiyelWkujiGyAXCAUtgTQpVuZdcbuX5L4vHJiSqI-XrO2Wl0j8dt8N13t9ztqOtbF55OPuG8Bd7NjXmQU6bOoWAnRpV-j8-g_xH6U72RHibMHPRcN8SXH2l3DZ_kMVVpAg3OWazB6fL9zqA0s5aqw1L2czQd18IK5VXJNV7bQ1bjpWP26-fBkx_pgAlH_iVtmfVF_0">
+        <div class="flex flex-col min-w-0"><span
+            class="font-headline-sm text-headline-sm text-primary leading-tight truncate">AgroAI</span><span
+            class="font-label-sm text-label-sm text-on-surface-variant truncate">Decision Support</span></div>
+      </div>
+      <div class="p-space-sm space-y-space-md">
+        <div class="space-y-space-xs">
+          <div
+            class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+            Main</div>
+          <nav class="flex flex-col space-y-space-xs"
+            data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a aria-current="page"
+              class="flex items-center gap-space-sm px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-semibold rounded-lg"
+              data-path="dashboard" href="#"><span
+                class="material-symbols-outlined text-[18px]">home</span><span>Dashboard</span></a><a
+              class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="my-farm" href="#"><span
+                class="material-symbols-outlined text-[18px]">location_on</span><span>My Farm</span></a><a
+              class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="fields" href="#"><span
+                class="material-symbols-outlined text-[18px]">layers</span><span>Fields</span></a><a
+              class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="weather" href="#"><span
+                class="material-symbols-outlined text-[18px]">wb_sunny</span><span>Weather</span></a></nav>
+        </div>
+        <div class="space-y-space-xs">
+          <div
+            class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+            AI &amp; Analysis</div>
+          <nav class="flex flex-col space-y-space-xs"
+            data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a
+              class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="ai-analysis" href="#"><span class="material-symbols-outlined text-[18px]">memory</span><span>AI
+                Analysis</span></a><a
+              class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="disease-detection" href="#"><span
+                class="material-symbols-outlined text-[18px]">filter_center_focus</span><span>Disease
+                Detection</span></a><a
+              class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="irrigation-planner" href="#"><span
+                class="material-symbols-outlined text-[18px]">water_drop</span><span>Irrigation Planner</span></a><a
+              class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="algorithms-and-theory" href="#"><span
+                class="material-symbols-outlined text-[18px]">menu_book</span><span>Algorithms &amp; Theory</span></a>
+          </nav>
+        </div>
+        <div class="space-y-space-xs">
+          <div
+            class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+            Management</div>
+          <nav class="flex flex-col space-y-space-xs"
+            data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a
+              class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="resources-and-sensors" href="#"><span
+                class="material-symbols-outlined text-[18px]">dns</span><span>Resources &amp; Sensors</span></a><a
+              class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="history-and-logs" href="#"><span
+                class="material-symbols-outlined text-[18px]">schedule</span><span>History &amp; Logs</span></a><a
+              class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="settings" href="#"><span
+                class="material-symbols-outlined text-[18px]">tune</span><span>Settings</span></a></nav>
+        </div>
+      </div>
+    </div>
+    <div class="p-space-sm border-t border-outline-variant/30 bg-surface">
+      <div
+        class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg bg-surface-container-lowest border border-outline-variant/40">
+        <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span><span
+          class="font-label-sm text-label-sm text-on-surface-variant truncate">FastAPI + Firebase (Healthy)</span>
+      </div>
+    </div>
+  </aside>
+  <div class="pl-60 flex flex-col min-h-screen">
+    <header
+      class="fixed top-0 left-60 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 z-40 px-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+      <div class="flex items-center gap-space-sm min-w-0"><span
+          class="material-symbols-outlined text-secondary text-[20px] shrink-0">eco</span>
+        <div class="flex items-center gap-space-xs truncate"><span
+            class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Green Valley
+            Farm</span><span class="text-outline font-label-md text-label-md">•</span><span
+            class="font-body-md text-body-md text-on-surface-variant truncate">Sector 4 — Salinas Valley, CA</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-gutter-lg shrink-0">
+        <div
+          class="hidden xl:flex items-center gap-space-xs bg-surface px-space-md py-space-xs rounded-lg border border-outline-variant/30 text-on-surface-variant font-data-mono text-data-mono">
+          <span class="material-symbols-outlined text-[18px] text-secondary">partly_cloudy_day</span><span>22°C
+            Clear</span><span class="text-outline-variant">|</span><span>Humidity 58%</span><span
+            class="text-outline-variant">|</span><span>Wind 9 km/h NW</span>
+        </div>
+        <div class="flex items-center gap-space-md"><button aria-label="Notifications"
+            class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface hover:text-on-surface transition-colors"
+            type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span
+              class="absolute top-1 right-1 w-4 h-4 bg-error text-on-error rounded-full flex items-center justify-center font-label-sm text-label-sm font-semibold">2</span></button>
+          <div class="h-6 w-[1px] bg-outline-variant/40"></div>
+          <div class="flex items-center gap-space-sm"><img alt="Profile"
+              class="w-8 h-8 rounded-full object-cover border border-outline-variant/30"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtfGUWf3TBenBcYhZR2uRKuz84PeAkSSbZSIDAtsU9X-CDXdkPpfQN-udNW7R8tRXtnbmjcAKD0XtbSS1C-oqAy-O66WIILaCzECUYoU8TK9EEcTWO7pa7Gt7dua4k6Z2E9Ew5kum2E5jxuIYdrupJhI6lU647zszH5VDn4T36L58MEqXqtN9ROwgKRZuEvIFVlmq9t5SdNc_h7Kqs2UR7uwgY4_1-h7ikIz4jyAVY2erQH8wA-uqo">
+            <div class="hidden md:flex flex-col text-left"><span
+                class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Sarah
+                Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Farm
+                Operations Lead</span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-16 bg-surface min-h-screen">
+      <div class="flex flex-col w-full">
+        <!-- Content Body Container -->
+        <div class="w-full max-w-[1640px] mx-auto px-margin md:px-margin-lg py-space-xl flex flex-col gap-space-xl">
+          <!-- Top Greeting & Operational Bar -->
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-xs">
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center gap-space-xs">
+                <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Salinas
+                  Valley Sector 4</span>
+                <span class="text-outline-variant font-label-sm">•</span>
+                <span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Last satellite sync 14 mins ago (Sentinel-2 L2A)
+                </span>
+              </div>
+              <h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Good morning,
+                Sarah</h1>
+              <p class="font-body-md text-body-md text-on-surface-variant">420 hectares actively monitored. 1 automated
+                irrigation run complete; 1 pathogen risk flagged.</p>
+            </div>
+            <div class="flex items-center gap-space-sm self-start lg:self-auto shrink-0">
+              <button
+                class="flex items-center gap-space-xs px-space-md h-9 bg-surface-container-lowest hover:bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg shadow-sm transition-all duration-150"
+                type="button">
+                <span class="material-symbols-outlined text-[18px] text-on-surface-variant">radar</span>
+                <span>Quick Field Scan</span>
+              </button>
+              <button
+                class="flex items-center gap-space-xs px-space-md h-9 bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm transition-all duration-150"
+                type="button">
+                <span class="material-symbols-outlined text-[18px] text-primary-fixed">auto_awesome</span>
+                <span>Generate Daily Plan</span>
+              </button>
+            </div>
+          </div>
+          <!-- KPI Metric Summary Row -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+            <!-- Total Monitored -->
+            <div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+              <div class="flex items-center justify-between text-on-surface-variant">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Monitored Fields</span>
+                <span class="material-symbols-outlined text-[18px]">grid_view</span>
+              </div>
+              <div class="my-space-xs">
+                <div class="font-display-lg text-display-lg text-on-surface font-semibold tracking-tight">12 <span
+                    class="font-headline-sm text-headline-sm text-on-surface-variant font-normal">Fields</span></div>
+                <div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">420 Hectares total</div>
+              </div>
+              <div class="flex items-center gap-1.5 pt-space-xs text-secondary font-label-sm text-label-sm font-medium">
+                <span class="material-symbols-outlined text-[14px]">add_circle</span>
+                <span>+2 enrolled this season</span>
+              </div>
+            </div>
+            <!-- Healthy Status -->
+            <div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+              <div class="flex items-center justify-between text-on-surface-variant">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Healthy Status</span>
+                <span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+              </div>
+              <div class="my-space-xs">
+                <div class="font-display-lg text-display-lg text-on-surface font-semibold tracking-tight">9 <span
+                    class="font-headline-sm text-headline-sm text-on-surface-variant font-normal">Fields</span></div>
+                <div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">315 Hectares stable</div>
+              </div>
+              <div class="pt-space-xs">
+                <span
+                  class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-on-secondary-container bg-secondary-container/40 font-label-sm text-label-sm font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Normal Growth
+                </span>
+              </div>
+            </div>
+            <!-- Needs Attention -->
+            <div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+              <div class="flex items-center justify-between text-on-surface-variant">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Needs Attention</span>
+                <span class="material-symbols-outlined text-[18px] text-amber-700">warning</span>
+              </div>
+              <div class="my-space-xs">
+                <div class="font-display-lg text-display-lg text-on-surface font-semibold tracking-tight">2 <span
+                    class="font-headline-sm text-headline-sm text-on-surface-variant font-normal">Fields</span></div>
+                <div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">B-2 (Wheat) &amp; E (Barley)</div>
+              </div>
+              <div class="pt-space-xs">
+                <span
+                  class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-amber-800 bg-amber-100 font-label-sm text-label-sm font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                  Moisture Deficit
+                </span>
+              </div>
+            </div>
+            <!-- Critical Status -->
+            <div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+              <div class="flex items-center justify-between text-on-surface-variant">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Critical Action</span>
+                <span class="material-symbols-outlined text-[18px] text-error">emergency</span>
+              </div>
+              <div class="my-space-xs">
+                <div class="font-display-lg text-display-lg text-error font-semibold tracking-tight">1 <span
+                    class="font-headline-sm text-headline-sm text-error/80 font-normal">Field</span></div>
+                <div class="font-body-sm text-body-sm text-on-surface font-medium mt-0.5">Field C-4 (Soybeans)</div>
+              </div>
+              <div class="pt-space-xs">
+                <span
+                  class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-error bg-error-container/60 font-label-sm text-label-sm font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                  Fungal Blight Risk
+                </span>
+              </div>
+            </div>
+            <!-- Water Reserves -->
+            <div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+              <div class="flex items-center justify-between text-on-surface-variant">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Reservoir
+                  Reserves</span>
+                <span class="material-symbols-outlined text-[18px] text-secondary">water</span>
+              </div>
+              <div class="my-space-xs">
+                <div class="font-display-lg text-display-lg text-on-surface font-semibold tracking-tight">64.2k <span
+                    class="font-headline-sm text-headline-sm text-on-surface-variant font-normal">L</span></div>
+                <div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">78% total capacity</div>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs">
+                <div class="w-full bg-surface-container-high rounded-full h-1.5 mr-2 overflow-hidden">
+                  <div class="bg-secondary h-1.5 rounded-full" style="width: 78%"></div>
+                </div>
+                <span class="font-data-mono text-label-sm text-secondary shrink-0">+14h buffer</span>
+              </div>
+            </div>
+          </div>
+          <!-- Two-Column Master Operational Layout -->
+          <div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-lg items-start">
+            <!-- LEFT COLUMN: Spatial Map & Conditions Table (7 of 12 cols = ~58%) -->
+            <div class="xl:col-span-7 flex flex-col gap-space-xl">
+              <!-- Spatial Map & Sensor Nodes Card -->
+              <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+                <div class="px-space-lg py-space-md bg-surface-container-low/40 flex items-center justify-between">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[20px] text-secondary">map</span>
+                    <h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Farm Spatial Map &amp;
+                      Sensor Nodes</h2>
+                    <span
+                      class="px-2 py-0.5 rounded bg-surface-container font-data-mono text-label-sm text-on-surface-variant">GPS:
+                      36.677° N, 121.655° W</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs">
+                    <span
+                      class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                      <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                      6 Nodes Active
+                    </span>
+                  </div>
+                </div>
+                <!-- Interactive Cartographic Map Canvas -->
+                <div class="p-space-lg">
+                  <div
+                    class="relative w-full aspect-[16/10] bg-surface-container-low rounded-lg overflow-hidden select-none">
+                    <!-- SVG Farm Architecture Map Layer -->
+                    <svg class="w-full h-full" fill="none" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                      <!-- Background Topography Shading -->
+                      <rect fill="#F4F7F2" height="500" width="800"></rect>
+                      <!-- Contour lines subtle -->
+                      <path d="M-20 80 Q 200 40 400 90 T 820 60" fill="none" stroke="#E3EAE0" stroke-width="1.5"></path>
+                      <path d="M-20 220 Q 220 180 450 240 T 820 200" fill="none" stroke="#E3EAE0" stroke-width="1.5">
+                      </path>
+                      <path d="M-20 380 Q 300 320 500 400 T 820 350" fill="none" stroke="#E3EAE0" stroke-width="1.5">
+                      </path>
+                      <!-- Primary Irrigation Canal (Blue Accent) -->
+                      <path d="M 40 480 C 180 430, 260 300, 390 260 C 520 220, 620 100, 760 30" fill="none"
+                        stroke="#92C4D6" stroke-linecap="round" stroke-width="8"></path>
+                      <path d="M 40 480 C 180 430, 260 300, 390 260 C 520 220, 620 100, 760 30" fill="none"
+                        stroke="#5E9DB3" stroke-dasharray="6 4" stroke-width="2"></path>
+                      <!-- Field A: Corn (Top Left) -->
+                      <g class="cursor-pointer group" id="field-a-poly">
+                        <polygon fill="#E4EFE3" points="50,50 340,50 330,220 40,220" stroke="#B8D7B5" stroke-width="2">
+                        </polygon>
+                        <!-- Furrow pattern lines -->
+                        <path d="M60 80 L330 80 M60 110 L325 110 M55 140 L320 140 M50 170 L315 170 M45 200 L310 200"
+                          stroke="#CFE4CB" stroke-width="1"></path>
+                        <rect fill="#FFFFFF" height="24" opacity="0.92" rx="4" width="110" x="65" y="65"></rect>
+                        <text fill="#1E3D2F" font-family="Inter" font-size="12" font-weight="600" x="75" y="81">Field A
+                          • Corn</text>
+                        <text fill="#424844" font-family="Inter" font-size="11" x="75" y="112">110 Ha • Pivot
+                          Active</text>
+                      </g>
+                      <!-- Field B: Wheat (Top Right) -->
+                      <g class="cursor-pointer group" id="field-b-poly">
+                        <polygon fill="#FBF3DE" points="380,45 740,40 730,210 390,210" stroke="#E6D3A3"
+                          stroke-width="2"></polygon>
+                        <!-- Row lines -->
+                        <path
+                          d="M390 75 L735 70 M390 105 L730 100 M390 135 L725 130 M390 165 L720 160 M390 195 L715 190"
+                          stroke="#F1E4BF" stroke-width="1"></path>
+                        <rect fill="#FFFFFF" height="24" opacity="0.92" rx="4" width="115" x="400" y="55"></rect>
+                        <text fill="#4E3E1A" font-family="Inter" font-size="12" font-weight="600" x="410" y="71">Field B
+                          • Wheat</text>
+                        <text fill="#6B5B30" font-family="Inter" font-size="11" x="410" y="102">95 Ha • Advisory
+                          Flag</text>
+                      </g>
+                      <!-- Central Water Storage & Pump Station Hub -->
+                      <g id="water-hub">
+                        <circle cx="370" cy="245" fill="#1E3D2F" r="28" stroke="#FFFFFF" stroke-width="3"></circle>
+                        <circle cx="370" cy="245" fill="#2E6F40" r="20"></circle>
+                        <path
+                          d="M370 235 C364 243, 360 248, 360 252 C360 258, 364 261, 370 261 C376 261, 380 258, 380 252 C380 248, 376 243, 370 235 Z"
+                          fill="#FFFFFF"></path>
+                        <rect fill="#06271A" height="20" rx="3" width="80" x="330" y="278"></rect>
+                        <text fill="#FFFFFF" font-family="Inter" font-size="10" font-weight="600" text-anchor="middle"
+                          x="370" y="292">PUMPS P1-P3</text>
+                      </g>
+                      <!-- Main Farm Access Roads (Dashed Ochre) -->
+                      <path d="M 360 490 L 360 290" stroke="#D1C7B7" stroke-linecap="square" stroke-width="8"></path>
+                      <path d="M 360 490 L 360 290" stroke="#FAF8F5" stroke-dasharray="6 6" stroke-width="2"></path>
+                      <path d="M 20 235 L 780 230" stroke="#D1C7B7" stroke-width="7"></path>
+                      <path d="M 20 235 L 780 230" stroke="#FAF8F5" stroke-dasharray="6 6" stroke-width="2"></path>
+                      <!-- Field C-4: Soybeans (Bottom Left - Critical Focus) -->
+                      <g class="cursor-pointer group" id="field-c4-poly">
+                        <polygon fill="#FDF2F2" points="45,260 330,260 320,460 35,460" stroke="#EAA1A1"
+                          stroke-width="2"></polygon>
+                        <!-- Diagonal hatch for critical indication -->
+                        <path d="M50 290 L320 290 M50 330 L315 330 M45 370 L310 370 M40 410 L305 410" stroke="#F8D3D3"
+                          stroke-width="1"></path>
+                        <rect fill="#991B1B" height="26" rx="4" width="165" x="55" y="272"></rect>
+                        <text fill="#FFFFFF" font-family="Inter" font-size="12" font-weight="600" x="65" y="289">Field
+                          C-4 • Soybeans (ALERT)</text>
+                        <text fill="#991B1B" font-family="Inter" font-size="11" font-weight="600" x="55"
+                          y="325">Pathogen Scan Required</text>
+                      </g>
+                      <!-- Field D: Tomatoes (Bottom Right) -->
+                      <g class="cursor-pointer group" id="field-d-poly">
+                        <polygon fill="#EAF1ED" points="400,260 745,255 735,465 390,465" stroke="#B8D4C3"
+                          stroke-width="2"></polygon>
+                        <path
+                          d="M400 295 L740 290 M400 330 L735 325 M395 365 L730 360 M395 400 L725 395 M390 435 L720 430"
+                          stroke="#D4E4DB" stroke-width="1"></path>
+                        <rect fill="#FFFFFF" height="24" opacity="0.92" rx="4" width="135" x="415" y="272"></rect>
+                        <text fill="#1E3D2F" font-family="Inter" font-size="12" font-weight="600" x="425" y="288">Field
+                          D • Tomatoes</text>
+                        <text fill="#424844" font-family="Inter" font-size="11" x="425" y="320">75 Ha • Drip Next
+                          (14:00)</text>
+                      </g>
+                      <!-- Tractor Telemetry Path (Dotted Path with icon) -->
+                      <path d="M 380 430 Q 560 420 580 340 T 680 300" fill="none" stroke="#296B3C"
+                        stroke-dasharray="4 6" stroke-width="2.5"></path>
+                      <g transform="translate(680, 290)">
+                        <circle cx="10" cy="10" fill="#06271A" r="14"></circle>
+                        <text fill="#ADF3B8" font-family="Material Symbols Outlined" font-size="14" text-anchor="middle"
+                          x="10" y="14">agriculture</text>
+                      </g>
+                    </svg>
+                    <!-- Real HTML Interactive Map Overlay Badges / Hotspots -->
+                    <!-- Hotspot 1: Field A Sensor Node -->
+                    <div class="absolute top-[28%] left-[24%] group cursor-pointer">
+                      <span class="relative flex h-4 w-4">
+                        <span
+                          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-4 w-4 bg-primary border-2 border-white"></span>
+                      </span>
+                      <div
+                        class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface px-2.5 py-1.5 rounded shadow-lg whitespace-nowrap z-20 pointer-events-none">
+                        <div class="font-label-sm text-label-sm font-semibold">Node SN-101 (Field A)</div>
+                        <div class="font-data-mono text-label-sm text-secondary-fixed">Moisture: 68% • Active Pivot
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Hotspot 2: Field B-2 Sensor Node -->
+                    <div class="absolute top-[26%] left-[68%] group cursor-pointer">
+                      <span class="relative flex h-3.5 w-3.5">
+                        <span
+                          class="relative inline-flex rounded-full h-3.5 w-3.5 bg-amber-600 border-2 border-white"></span>
+                      </span>
+                      <div
+                        class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface px-2.5 py-1.5 rounded shadow-lg whitespace-nowrap z-20 pointer-events-none">
+                        <div class="font-label-sm text-label-sm font-semibold">Node SN-204 (Field B)</div>
+                        <div class="font-data-mono text-label-sm text-amber-300">Moisture: 42% (Deficit)</div>
+                      </div>
+                    </div>
+                    <!-- Hotspot 3: Field C-4 Sensor Node (Critical) -->
+                    <div class="absolute top-[72%] left-[22%] group cursor-pointer">
+                      <span class="relative flex h-4 w-4">
+                        <span
+                          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-4 w-4 bg-error border-2 border-white"></span>
+                      </span>
+                      <div
+                        class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface px-2.5 py-1.5 rounded shadow-lg whitespace-nowrap z-20 pointer-events-none">
+                        <div class="font-label-sm text-label-sm font-semibold text-error-container">Node SN-310 (Field
+                          C-4)</div>
+                        <div class="font-data-mono text-label-sm text-white">Leaf Wetness 94% • Blight Alert</div>
+                      </div>
+                    </div>
+                    <!-- Hotspot 4: Field D Node -->
+                    <div class="absolute top-[70%] left-[72%] group cursor-pointer">
+                      <span class="relative flex h-3.5 w-3.5">
+                        <span
+                          class="relative inline-flex rounded-full h-3.5 w-3.5 bg-primary border-2 border-white"></span>
+                      </span>
+                      <div
+                        class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col bg-inverse-surface text-inverse-on-surface px-2.5 py-1.5 rounded shadow-lg whitespace-nowrap z-20 pointer-events-none">
+                        <div class="font-label-sm text-label-sm font-semibold">Node SN-402 (Field D)</div>
+                        <div class="font-data-mono text-label-sm text-secondary-fixed">Moisture: 61% • Drip Standby
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Map Legend Pill (Bottom Left) -->
+                    <div
+                      class="absolute bottom-3 left-3 bg-surface-container-lowest/95 backdrop-blur px-3 py-2 rounded shadow-sm flex flex-wrap items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+                      <div class="flex items-center gap-1.5">
+                        <span class="w-3 h-2 rounded-xs bg-[#B8D7B5]"></span>
+                        <span>Crops</span>
+                      </div>
+                      <div class="flex items-center gap-1.5">
+                        <span class="w-4 h-0.5 bg-[#5E9DB3]"></span>
+                        <span>Canal</span>
+                      </div>
+                      <div class="flex items-center gap-1.5">
+                        <span class="w-3 h-0.5 bg-[#D1C7B7]"></span>
+                        <span>Access Roads</span>
+                      </div>
+                      <div class="flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-primary"></span>
+                        <span>IoT Probes</span>
+                      </div>
+                    </div>
+                    <!-- Map Controls (Top Right) -->
+                    <div
+                      class="absolute top-3 right-3 flex flex-col gap-1 bg-surface-container-lowest/95 rounded shadow-sm p-1">
+                      <button aria-label="Zoom in"
+                        class="w-7 h-7 flex items-center justify-center hover:bg-surface-container rounded text-on-surface text-sm font-bold"
+                        type="button">+</button>
+                      <button aria-label="Zoom out"
+                        class="w-7 h-7 flex items-center justify-center hover:bg-surface-container rounded text-on-surface text-sm font-bold"
+                        type="button">−</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Live Field Conditions Monitoring Table -->
+              <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+                <div class="px-space-lg py-space-md bg-surface-container-low/40 flex items-center justify-between">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[20px] text-secondary">tune</span>
+                    <h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Live Field Conditions
+                      Monitoring</h2>
+                  </div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">Real-time Soil &amp; Microclimate
+                    Matrix</span>
+                </div>
+                <div class="overflow-x-auto">
+                  <table class="w-full text-left border-collapse">
+                    <thead>
+                      <tr
+                        class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+                        <th class="py-2.5 px-space-md font-semibold">Field ID</th>
+                        <th class="py-2.5 px-space-md font-semibold">Crop Type</th>
+                        <th class="py-2.5 px-space-md font-semibold w-40">Soil Moisture</th>
+                        <th class="py-2.5 px-space-md font-semibold">pH Level</th>
+                        <th class="py-2.5 px-space-md font-semibold">Ambient</th>
+                        <th class="py-2.5 px-space-md font-semibold">Status</th>
+                        <th class="py-2.5 px-space-md font-semibold">Water Need</th>
+                        <th class="py-2.5 px-space-md font-semibold text-right">Quick Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-surface-container-low text-on-surface font-body-sm text-body-sm">
+                      <!-- Row 1: Field A -->
+                      <tr class="hover:bg-surface-container-low/50 transition-colors">
+                        <td class="py-3 px-space-md font-data-mono font-semibold text-on-surface">Field A</td>
+                        <td class="py-3 px-space-md">Sweet Corn</td>
+                        <td class="py-3 px-space-md">
+                          <div class="flex items-center gap-2">
+                            <div class="w-20 bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+                              <div class="bg-secondary h-1.5 rounded-full" style="width: 68%"></div>
+                            </div>
+                            <span class="font-data-mono text-label-sm">68%</span>
+                          </div>
+                        </td>
+                        <td class="py-3 px-space-md font-data-mono">6.4 pH</td>
+                        <td class="py-3 px-space-md font-data-mono">22.4°C</td>
+                        <td class="py-3 px-space-md">
+                          <span
+                            class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-on-secondary-container bg-secondary-container/40 font-label-sm text-label-sm font-semibold">
+                            Healthy
+                          </span>
+                        </td>
+                        <td class="py-3 px-space-md text-on-surface-variant">Low</td>
+                        <td class="py-3 px-space-md text-right">
+                          <button class="text-secondary hover:text-primary font-label-sm text-label-sm font-semibold"
+                            type="button">Inspect</button>
+                        </td>
+                      </tr>
+                      <!-- Row 2: Field B-2 -->
+                      <tr class="hover:bg-surface-container-low/50 transition-colors bg-amber-50/20">
+                        <td class="py-3 px-space-md font-data-mono font-semibold text-on-surface">Field B-2</td>
+                        <td class="py-3 px-space-md">Hard Red Wheat</td>
+                        <td class="py-3 px-space-md">
+                          <div class="flex items-center gap-2">
+                            <div class="w-20 bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+                              <div class="bg-amber-600 h-1.5 rounded-full" style="width: 42%"></div>
+                            </div>
+                            <span class="font-data-mono text-label-sm text-amber-700">42%</span>
+                          </div>
+                        </td>
+                        <td class="py-3 px-space-md font-data-mono">6.8 pH</td>
+                        <td class="py-3 px-space-md font-data-mono">24.8°C</td>
+                        <td class="py-3 px-space-md">
+                          <span
+                            class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-amber-800 bg-amber-100 font-label-sm text-label-sm font-semibold">
+                            Attention
+                          </span>
+                        </td>
+                        <td class="py-3 px-space-md text-amber-700 font-medium">Moderate</td>
+                        <td class="py-3 px-space-md text-right">
+                          <button class="text-amber-800 hover:text-amber-900 font-label-sm text-label-sm font-semibold"
+                            type="button">Queue Run</button>
+                        </td>
+                      </tr>
+                      <!-- Row 3: Field C-4 (Critical) -->
+                      <tr class="hover:bg-surface-container-low/50 transition-colors bg-error-container/20">
+                        <td class="py-3 px-space-md font-data-mono font-bold text-error">Field C-4</td>
+                        <td class="py-3 px-space-md font-medium">Soybeans</td>
+                        <td class="py-3 px-space-md">
+                          <div class="flex items-center gap-2">
+                            <div class="w-20 bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+                              <div class="bg-secondary h-1.5 rounded-full" style="width: 79%"></div>
+                            </div>
+                            <span class="font-data-mono text-label-sm">79%</span>
+                          </div>
+                        </td>
+                        <td class="py-3 px-space-md font-data-mono">6.1 pH</td>
+                        <td class="py-3 px-space-md font-data-mono text-error">21.0°C (Wet)</td>
+                        <td class="py-3 px-space-md">
+                          <span
+                            class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-error bg-error-container/80 font-label-sm text-label-sm font-semibold">
+                            Critical
+                          </span>
+                        </td>
+                        <td class="py-3 px-space-md text-on-surface-variant">None (Halt)</td>
+                        <td class="py-3 px-space-md text-right">
+                          <button
+                            class="px-2 py-0.5 rounded bg-error text-on-error font-label-sm text-label-sm font-semibold hover:bg-error/90"
+                            type="button">Pathogen AI</button>
+                        </td>
+                      </tr>
+                      <!-- Row 4: Field D -->
+                      <tr class="hover:bg-surface-container-low/50 transition-colors">
+                        <td class="py-3 px-space-md font-data-mono font-semibold text-on-surface">Field D</td>
+                        <td class="py-3 px-space-md">Roma Tomatoes</td>
+                        <td class="py-3 px-space-md">
+                          <div class="flex items-center gap-2">
+                            <div class="w-20 bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+                              <div class="bg-secondary h-1.5 rounded-full" style="width: 61%"></div>
+                            </div>
+                            <span class="font-data-mono text-label-sm">61%</span>
+                          </div>
+                        </td>
+                        <td class="py-3 px-space-md font-data-mono">6.5 pH</td>
+                        <td class="py-3 px-space-md font-data-mono">23.1°C</td>
+                        <td class="py-3 px-space-md">
+                          <span
+                            class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-on-secondary-container bg-secondary-container/40 font-label-sm text-label-sm font-semibold">
+                            Healthy
+                          </span>
+                        </td>
+                        <td class="py-3 px-space-md text-on-surface-variant">Scheduled</td>
+                        <td class="py-3 px-space-md text-right">
+                          <button class="text-secondary hover:text-primary font-label-sm text-label-sm font-semibold"
+                            type="button">Inspect</button>
+                        </td>
+                      </tr>
+                      <!-- Row 5: Field E -->
+                      <tr class="hover:bg-surface-container-low/50 transition-colors">
+                        <td class="py-3 px-space-md font-data-mono font-semibold text-on-surface">Field E</td>
+                        <td class="py-3 px-space-md">Malting Barley</td>
+                        <td class="py-3 px-space-md">
+                          <div class="flex items-center gap-2">
+                            <div class="w-20 bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+                              <div class="bg-amber-600 h-1.5 rounded-full" style="width: 48%"></div>
+                            </div>
+                            <span class="font-data-mono text-label-sm text-amber-700">48%</span>
+                          </div>
+                        </td>
+                        <td class="py-3 px-space-md font-data-mono">7.0 pH</td>
+                        <td class="py-3 px-space-md font-data-mono">25.0°C</td>
+                        <td class="py-3 px-space-md">
+                          <span
+                            class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-amber-800 bg-amber-100 font-label-sm text-label-sm font-semibold">
+                            Attention
+                          </span>
+                        </td>
+                        <td class="py-3 px-space-md text-amber-700 font-medium">Moderate</td>
+                        <td class="py-3 px-space-md text-right">
+                          <button class="text-amber-800 hover:text-amber-900 font-label-sm text-label-sm font-semibold"
+                            type="button">Queue Run</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- RIGHT COLUMN: Tasks Feed, Telemetry, Export (5 of 12 cols = ~42%) -->
+            <div class="xl:col-span-5 flex flex-col gap-space-xl">
+              <!-- Today's Irrigation & Task Feed -->
+              <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+                <div class="px-space-lg py-space-md bg-surface-container-low/40 flex items-center justify-between">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[20px] text-secondary">calendar_today</span>
+                    <h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Today's Irrigation &amp;
+                      Task Feed</h2>
+                  </div>
+                  <span
+                    class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold">4
+                    Items</span>
+                </div>
+                <div class="p-space-lg flex flex-col gap-space-md">
+                  <!-- Feed Item 1: Completed -->
+                  <div class="flex items-start gap-space-md relative pb-space-md">
+                    <div
+                      class="w-7 h-7 rounded-full bg-secondary-container text-secondary flex items-center justify-center shrink-0 mt-0.5 z-10">
+                      <span class="material-symbols-outlined text-[16px]">check</span>
+                    </div>
+                    <div class="absolute left-3.5 top-7 bottom-0 w-0.5 bg-surface-container"></div>
+                    <div class="flex flex-col min-w-0 flex-1">
+                      <div class="flex items-center justify-between gap-2">
+                        <span class="font-label-sm text-label-sm font-semibold text-secondary">06:00 AM —
+                          COMPLETED</span>
+                        <span class="font-data-mono text-label-sm text-on-surface-variant">Pump P1</span>
+                      </div>
+                      <div class="font-body-sm text-body-sm text-on-surface font-medium mt-0.5">Field A Automated Deep
+                        Soak</div>
+                      <div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">120 L applied across 110 Ha.
+                        AC-3 microclimate constraint fully satisfied.</div>
+                    </div>
+                  </div>
+                  <!-- Feed Item 2: Pathogen Alert (Critical) -->
+                  <div class="flex items-start gap-space-md relative pb-space-md">
+                    <div
+                      class="w-7 h-7 rounded-full bg-error-container text-error flex items-center justify-center shrink-0 mt-0.5 z-10">
+                      <span class="material-symbols-outlined text-[16px]">notification_important</span>
+                    </div>
+                    <div class="absolute left-3.5 top-7 bottom-0 w-0.5 bg-surface-container"></div>
+                    <div class="flex flex-col min-w-0 flex-1 p-space-sm bg-error-container/20 rounded-lg">
+                      <div class="flex items-center justify-between gap-2">
+                        <span class="font-label-sm text-label-sm font-bold text-error">08:30 AM — AI DIAGNOSTIC
+                          ALERT</span>
+                        <span class="font-data-mono text-label-sm text-error font-semibold">Field C-4</span>
+                      </div>
+                      <div class="font-body-sm text-body-sm text-on-surface font-semibold mt-0.5">CNN Model: Leaf
+                        Septoria Suspected</div>
+                      <div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Algorithmic Confidence:
+                        <span class="font-semibold text-on-surface font-data-mono">89.2%</span>. Multispectral canopy
+                        reflectance anomaly identified.
+                      </div>
+                      <div class="flex items-center gap-space-sm mt-2">
+                        <button
+                          class="px-2.5 py-1 rounded bg-error text-on-error font-label-sm text-label-sm font-semibold"
+                          type="button">Review Spectrogram</button>
+                        <button
+                          class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-medium"
+                          type="button">Assign Scout</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Feed Item 3: Soil Re-check -->
+                  <div class="flex items-start gap-space-md relative pb-space-md">
+                    <div
+                      class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5 z-10">
+                      <span class="material-symbols-outlined text-[16px]">schedule</span>
+                    </div>
+                    <div class="absolute left-3.5 top-7 bottom-0 w-0.5 bg-surface-container"></div>
+                    <div class="flex flex-col min-w-0 flex-1">
+                      <div class="flex items-center justify-between gap-2">
+                        <span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">11:00 AM —
+                          UPCOMING</span>
+                        <span class="font-data-mono text-label-sm text-on-surface-variant">Sector 2</span>
+                      </div>
+                      <div class="font-body-sm text-body-sm text-on-surface font-medium mt-0.5">Soil Moisture Secondary
+                        Verification</div>
+                      <div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Validation of capacitance
+                        probe readings following morning dew dissipation.</div>
+                    </div>
+                  </div>
+                  <!-- Feed Item 4: Scheduled Irrigation -->
+                  <div class="flex items-start gap-space-md relative">
+                    <div
+                      class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5 z-10">
+                      <span class="material-symbols-outlined text-[16px]">water_drop</span>
+                    </div>
+                    <div class="flex flex-col min-w-0 flex-1">
+                      <div class="flex items-center justify-between gap-2">
+                        <span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">02:00 PM —
+                          QUEUED</span>
+                        <span class="font-data-mono text-label-sm text-on-surface-variant">Pump P3</span>
+                      </div>
+                      <div class="font-body-sm text-body-sm text-on-surface font-medium mt-0.5">Field D Precision Drip
+                        Cycle</div>
+                      <div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">90 L targeted delivery under
+                        optimal transpiration window.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Sensor Fleet Telemetry Grid -->
+              <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+                <div class="px-space-lg py-space-md bg-surface-container-low/40 flex items-center justify-between">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[20px] text-secondary">sensors</span>
+                    <h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Sensor Fleet Telemetry
+                    </h2>
+                  </div>
+                  <span class="font-data-mono text-label-sm text-secondary">6 / 6 Online</span>
+                </div>
+                <div class="p-space-lg grid grid-cols-2 sm:grid-cols-3 gap-space-sm">
+                  <!-- Probe 1 -->
+                  <div class="p-space-sm bg-surface-container-low/30 rounded-lg flex flex-col gap-1">
+                    <div class="flex items-center justify-between">
+                      <span class="font-data-mono font-semibold text-label-sm text-on-surface">SN-101</span>
+                      <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    </div>
+                    <div class="font-label-sm text-label-sm text-on-surface-variant">Field A (Corn)</div>
+                    <div class="flex items-center justify-between mt-1 text-on-surface font-data-mono text-label-sm">
+                      <span>94% bat</span>
+                      <span>-68 dBm</span>
+                    </div>
+                    <div class="text-outline text-label-sm font-body-sm">2m ago</div>
+                  </div>
+                  <!-- Probe 2 -->
+                  <div class="p-space-sm bg-surface-container-low/30 rounded-lg flex flex-col gap-1">
+                    <div class="flex items-center justify-between">
+                      <span class="font-data-mono font-semibold text-label-sm text-on-surface">SN-102</span>
+                      <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    </div>
+                    <div class="font-label-sm text-label-sm text-on-surface-variant">Field A North</div>
+                    <div class="flex items-center justify-between mt-1 text-on-surface font-data-mono text-label-sm">
+                      <span>88% bat</span>
+                      <span>-72 dBm</span>
+                    </div>
+                    <div class="text-outline text-label-sm font-body-sm">4m ago</div>
+                  </div>
+                  <!-- Probe 3 -->
+                  <div class="p-space-sm bg-amber-50/40 rounded-lg flex flex-col gap-1">
+                    <div class="flex items-center justify-between">
+                      <span class="font-data-mono font-semibold text-label-sm text-on-surface">SN-204</span>
+                      <span class="w-2 h-2 rounded-full bg-amber-600"></span>
+                    </div>
+                    <div class="font-label-sm text-label-sm text-on-surface-variant">Field B-2</div>
+                    <div class="flex items-center justify-between mt-1 text-on-surface font-data-mono text-label-sm">
+                      <span class="text-amber-700">62% bat</span>
+                      <span>-81 dBm</span>
+                    </div>
+                    <div class="text-outline text-label-sm font-body-sm">1m ago</div>
+                  </div>
+                  <!-- Probe 4 -->
+                  <div class="p-space-sm bg-error-container/10 rounded-lg flex flex-col gap-1">
+                    <div class="flex items-center justify-between">
+                      <span class="font-data-mono font-semibold text-label-sm text-error">SN-310</span>
+                      <span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+                    </div>
+                    <div class="font-label-sm text-label-sm text-on-surface-variant">Field C-4</div>
+                    <div class="flex items-center justify-between mt-1 text-on-surface font-data-mono text-label-sm">
+                      <span>91% bat</span>
+                      <span>-64 dBm</span>
+                    </div>
+                    <div class="text-error font-semibold text-label-sm">Syncing now</div>
+                  </div>
+                  <!-- Probe 5 -->
+                  <div class="p-space-sm bg-surface-container-low/30 rounded-lg flex flex-col gap-1">
+                    <div class="flex items-center justify-between">
+                      <span class="font-data-mono font-semibold text-label-sm text-on-surface">SN-402</span>
+                      <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    </div>
+                    <div class="font-label-sm text-label-sm text-on-surface-variant">Field D Root</div>
+                    <div class="flex items-center justify-between mt-1 text-on-surface font-data-mono text-label-sm">
+                      <span>96% bat</span>
+                      <span>-62 dBm</span>
+                    </div>
+                    <div class="text-outline text-label-sm font-body-sm">3m ago</div>
+                  </div>
+                  <!-- Probe 6 -->
+                  <div class="p-space-sm bg-surface-container-low/30 rounded-lg flex flex-col gap-1">
+                    <div class="flex items-center justify-between">
+                      <span class="font-data-mono font-semibold text-label-sm text-on-surface">SN-501</span>
+                      <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    </div>
+                    <div class="font-label-sm text-label-sm text-on-surface-variant">Field E East</div>
+                    <div class="flex items-center justify-between mt-1 text-on-surface font-data-mono text-label-sm">
+                      <span>83% bat</span>
+                      <span>-75 dBm</span>
+                    </div>
+                    <div class="text-outline text-label-sm font-body-sm">6m ago</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Export Daily Agronomy Report Card -->
+              <div
+                class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+                <div class="flex items-center gap-space-md">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface shrink-0">
+                    <span class="material-symbols-outlined text-[24px]">description</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Export Daily Agronomy
+                      Report</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">Includes canopy index, irrigation
+                      ledger, &amp; AI logs.</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-space-xs shrink-0 self-end sm:self-auto">
+                  <button
+                    class="px-space-md h-8 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded flex items-center gap-1 transition-colors"
+                    type="button">
+                    <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+                    <span>PDF</span>
+                  </button>
+                  <button
+                    class="px-space-md h-8 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded flex items-center gap-1 transition-colors"
+                    type="button">
+                    <span class="material-symbols-outlined text-[16px]">table_view</span>
+                    <span>CSV</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
