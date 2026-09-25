@@ -1,0 +1,38 @@
+# Credentials - never commit
+.env
+.env.local
+kaggle.json
+serviceAccountKey.json
+firebase-credentials.json
+service-account*.json
+
+# Raw / extracted / processed datasets (multi-GB, never committed)
+data/raw/
+data/extracted/
+data/processed/
+data/cache/
+data/metadata_cache/
+data/manifests/*.csv
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Training checkpoints (keep the final production model, drop intermediates)
+models/*.pth
+models/*.pt
+models/checkpoints/
+models/*.ckpt
+outputs/
+scratch/

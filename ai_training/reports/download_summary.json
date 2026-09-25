@@ -1,0 +1,13 @@
+{
+  "dataset_ref": "karagwaanntreasure/plant-disease-detection",
+  "url": "https://www.kaggle.com/datasets/karagwaanntreasure/plant-disease-detection",
+  "archive_path": "E:\\ai-agro-project\\ai_training\\data\\raw\\plant-disease-detection.zip",
+  "archive_bytes": 559927257,
+  "archive_sha256": "c72f375b650a45d6a29ead9eea35532b7e3deccc65121f2c7a2581dc8f2966d3",
+  "archive_entries": 35726,
+  "extract_path": "E:\\ai-agro-project\\ai_training\\data\\extracted\\plant-disease-detection",
+  "extracted_bytes": 556471708,
+  "image_count": 35725,
+  "class_count": 23,
+  "downloaded_at": "2026-09-25T23:41:48"
+}

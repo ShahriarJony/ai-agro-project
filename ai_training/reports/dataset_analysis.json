@@ -1,0 +1,114 @@
+{
+  "dataset_root": "E:\\ai-agro-project\\ai_training\\data\\extracted\\plant-disease-detection\\Dataset",
+  "total_images": 35725,
+  "valid_images": 35725,
+  "invalid_images": 0,
+  "num_classes": 23,
+  "class_mapping": {
+    "0": "Apple___Apple_scab",
+    "1": "Apple___Black_rot",
+    "2": "Apple___Cedar_apple_rust",
+    "3": "Apple___healthy",
+    "4": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+    "5": "Corn_(maize)___Common_rust_",
+    "6": "Corn_(maize)___healthy",
+    "7": "Corn_(maize)___Northern_Leaf_Blight",
+    "8": "Pepper__bell___Bacterial_spot",
+    "9": "Pepper__bell___healthy",
+    "10": "Potato___Early_blight",
+    "11": "Potato___healthy",
+    "12": "Potato___Late_blight",
+    "13": "Tomato__Target_Spot",
+    "14": "Tomato__Tomato_mosaic_virus",
+    "15": "Tomato__Tomato_YellowLeaf__Curl_Virus",
+    "16": "Tomato_Bacterial_spot",
+    "17": "Tomato_Early_blight",
+    "18": "Tomato_healthy",
+    "19": "Tomato_Late_blight",
+    "20": "Tomato_Leaf_Mold",
+    "21": "Tomato_Septoria_leaf_spot",
+    "22": "Tomato_Spider_mites_Two_spotted_spider_mite"
+  },
+  "class_counts": {
+    "Tomato__Tomato_YellowLeaf__Curl_Virus": 3208,
+    "Tomato_Bacterial_spot": 2127,
+    "Apple___Apple_scab": 2016,
+    "Apple___healthy": 2008,
+    "Apple___Black_rot": 1987,
+    "Tomato_Late_blight": 1909,
+    "Corn_(maize)___Northern_Leaf_Blight": 1908,
+    "Corn_(maize)___Common_rust_": 1907,
+    "Corn_(maize)___healthy": 1859,
+    "Tomato_Septoria_leaf_spot": 1771,
+    "Apple___Cedar_apple_rust": 1760,
+    "Tomato_Spider_mites_Two_spotted_spider_mite": 1676,
+    "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": 1642,
+    "Tomato_healthy": 1591,
+    "Pepper__bell___healthy": 1478,
+    "Tomato__Target_Spot": 1404,
+    "Potato___Early_blight": 1000,
+    "Potato___Late_blight": 1000,
+    "Tomato_Early_blight": 1000,
+    "Pepper__bell___Bacterial_spot": 997,
+    "Tomato_Leaf_Mold": 952,
+    "Tomato__Tomato_mosaic_virus": 373,
+    "Potato___healthy": 152
+  },
+  "healthy_classes": [
+    "Apple___healthy",
+    "Corn_(maize)___healthy",
+    "Pepper__bell___healthy",
+    "Potato___healthy",
+    "Tomato_healthy"
+  ],
+  "disease_classes": [
+    "Apple___Apple_scab",
+    "Apple___Black_rot",
+    "Apple___Cedar_apple_rust",
+    "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+    "Corn_(maize)___Common_rust_",
+    "Corn_(maize)___Northern_Leaf_Blight",
+    "Pepper__bell___Bacterial_spot",
+    "Potato___Early_blight",
+    "Potato___Late_blight",
+    "Tomato__Target_Spot",
+    "Tomato__Tomato_mosaic_virus",
+    "Tomato__Tomato_YellowLeaf__Curl_Virus",
+    "Tomato_Bacterial_spot",
+    "Tomato_Early_blight",
+    "Tomato_Late_blight",
+    "Tomato_Leaf_Mold",
+    "Tomato_Septoria_leaf_spot",
+    "Tomato_Spider_mites_Two_spotted_spider_mite"
+  ],
+  "imbalance": {
+    "min_count": 152,
+    "max_count": 3208,
+    "ratio": 21.105,
+    "assessment": "highly imbalanced"
+  },
+  "duplicates": {
+    "exact_groups": 22,
+    "exact_redundant_copies": 22,
+    "cross_class_exact_groups": 0,
+    "near_pairs": 39
+  },
+  "dimensions": {
+    "min_width": 256,
+    "max_width": 256,
+    "min_height": 256,
+    "max_height": 256,
+    "most_common": {
+      "256x256": 35725
+    }
+  },
+  "formats": {
+    "JPEG": 35724,
+    "PNG": 1
+  },
+  "color_modes": {
+    "RGB": 35724,
+    "RGBA": 1
+  },
+  "predefined_split": false
+}

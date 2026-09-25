@@ -1,0 +1,79 @@
+[
+  {
+    "ref": "karagwaanntreasure/plant-disease-detection",
+    "title": "Plant Disease Detection",
+    "owner": "karagwaanntreasure",
+    "slug": "plant-disease-detection",
+    "subtitle": "Detect diseases in tomatoes, corn, apple, potatoes and pepper",
+    "url": "https://www.kaggle.com/datasets/karagwaanntreasure/plant-disease-detection",
+    "last_updated": "",
+    "licenses": [
+      "MIT"
+    ],
+    "usability_rating": 0.875,
+    "votes": 64,
+    "views": 24703,
+    "listing": {
+      "file_count": 35726,
+      "total_bytes": 556471706,
+      "extensions": {
+        ".jpg": 35723,
+        ".png": 1,
+        ".jpeg": 1
+      },
+      "image_directory_count": 23,
+      "directories": {
+        "Dataset/Tomato__Tomato_YellowLeaf__Curl_Virus": 3209,
+        "Dataset/Tomato_Bacterial_spot": 2127,
+        "Dataset/Apple___Apple_scab": 2016,
+        "Dataset/Apple___healthy": 2008,
+        "Dataset/Apple___Black_rot": 1987,
+        "Dataset/Tomato_Late_blight": 1909,
+        "Dataset/Corn_(maize)___Northern_Leaf_Blight": 1908,
+        "Dataset/Corn_(maize)___Common_rust_": 1907,
+        "Dataset/Corn_(maize)___healthy": 1859,
+        "Dataset/Tomato_Septoria_leaf_spot": 1771,
+        "Dataset/Apple___Cedar_apple_rust": 1760,
+        "Dataset/Tomato_Spider_mites_Two_spotted_spider_mite": 1676,
+        "Dataset/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": 1642,
+        "Dataset/Tomato_healthy": 1591,
+        "Dataset/Pepper__bell___healthy": 1478,
+        "Dataset/Tomato__Target_Spot": 1404,
+        "Dataset/Potato___Early_blight": 1000,
+        "Dataset/Potato___Late_blight": 1000,
+        "Dataset/Tomato_Early_blight": 1000,
+        "Dataset/Pepper__bell___Bacterial_spot": 997,
+        "Dataset/Tomato_Leaf_Mold": 952,
+        "Dataset/Tomato__Tomato_mosaic_virus": 373,
+        "Dataset/Potato___healthy": 152
+      }
+    },
+    "class_counts": {
+      "Apple___Apple_scab": 2016,
+      "Apple___Black_rot": 1987,
+      "Apple___Cedar_apple_rust": 1760,
+      "Apple___healthy": 2008,
+      "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": 1642,
+      "Corn_(maize)___Common_rust_": 1907,
+      "Corn_(maize)___Northern_Leaf_Blight": 1908,
+      "Corn_(maize)___healthy": 1859,
+      "Pepper__bell___Bacterial_spot": 997,
+      "Pepper__bell___healthy": 1478,
+      "Potato___Early_blight": 1000,
+      "Potato___Late_blight": 1000,
+      "Potato___healthy": 152,
+      "Tomato_Bacterial_spot": 2127,
+      "Tomato_Early_blight": 1000,
+      "Tomato_Late_blight": 1909,
+      "Tomato_Leaf_Mold": 952,
+      "Tomato_Septoria_leaf_spot": 1771,
+      "Tomato_Spider_mites_Two_spotted_spider_mite": 1676,
+      "Tomato__Target_Spot": 1404,
+      "Tomato__Tomato_YellowLeaf__Curl_Virus": 3208,
+      "Tomato__Tomato_mosaic_virus": 373,
+      "Tomato_healthy": 1591
+    },
+    "split_counts": {},
+    "detected_splits": []
+  }
+]
